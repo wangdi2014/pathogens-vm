@@ -56,6 +56,7 @@ booting as usual into Bio-Linux.
 'Bio-Linux 8, with Linux 3.13.0-32-generic (recovery mode)'.
 After it boots, choose 'Drop to root shell prompt'.
 3. Run these commands:
+
     ```
     mount -n -o remount,ro -t ext3 /dev/sda1 /
     zerofree -v /dev/sda1
