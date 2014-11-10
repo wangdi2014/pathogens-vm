@@ -1,0 +1,13 @@
+abacas
+assembly-stats
+augustus
+fastaq
+figtree
+gubbins
+kmc
+smalt
+iva
+pagit
+reapr
+tabix
+velvet

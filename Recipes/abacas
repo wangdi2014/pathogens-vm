@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -e
+
+cd /usr/local/bin
+wget http://downloads.sourceforge.net/project/abacas/abacas.1.3.1.pl
+awk 'BEGIN{print "#!/usr/bin/env perl"; getline} {print}' abacas.1.3.1.pl  > abacas.1.3.1.pl.fix
+mv abacas.1.3.1.pl.fix abacas.1.3.1.pl
+chmod 755 abacas.1.3.1.pl

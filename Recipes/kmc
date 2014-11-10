@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -e
+
+wget -O /usr/local/bin/kmc http://sun.aei.polsl.pl/kmc/download/kmc
+chmod 755 /usr/local/bin/kmc
+wget -O /usr/local/bin/kmc_dump http://sun.aei.polsl.pl/kmc/download/kmc_dump
+chmod 755 /usr/local/bin/kmc_dump

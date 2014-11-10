@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+set -e
+
+# install augustus
+d=/usr/local/bioinf-recipes/augustus
+mkdir $d
+cd $d
+wget http://bioinf.uni-greifswald.de/augustus/binaries/augustus.current.tar.gz
+tar -zxf augustus.current.tar.gz
+version=$(ls | awk -F"-" '!/current/ {print $2}')
+cd augustus-$version/src
+make
+cd ..
+make install
+
+# add 3D7 data
+mkdir /usr/local/bioinf-recipes/augustus/augustus-$version/config/species/3D7
+echo "AUGUSTUS_CONFIG_PATH=/usr/local/bioinf/augustus/augustus-$version/config" >> /etc/environment
+# need to copy the 3d7 files from *somewhere* to /usr/local/bioinf/augustus/augustus-3.0.2/config/species/3D7
