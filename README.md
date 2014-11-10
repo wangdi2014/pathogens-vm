@@ -61,3 +61,5 @@ After it boots, choose 'Drop to root shell prompt'.
     zerofree -v /dev/sda1
     shutdown -h now
     ```
+
+
