@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -e
+
+version=1.0.17
+d=/usr/local/bioinf-recipes/reapr
+mkdir $d
+cd $d
+wget ftp://ftp.sanger.ac.uk/pub/resources/software/reapr/Reapr_$version.tar.gz
+tar -zxf Reapr_$version.tar.gz
+rm Reapr_$version.tar.gz
+cd Reapr_$version
+./install.sh
+ln -s $d/Reapr_$version/reapr /usr/local/bin/reapr

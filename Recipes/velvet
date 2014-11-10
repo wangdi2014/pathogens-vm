@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -e
+
+# Although it’s in bioloinux, there are a few versions of velvet
+# compiled# with different options, all as part of the 'velvet' package.
+# Remove it if it's installed, and
+# install manually once with the options we want.
+dpkg -s velvet >/dev/null 2>&1 && {
+    apt-get remove -y velvet
+}
+
+d=/usr/local/bioinf-recipes/velvet
+mkdir $d
+cd $d
+wget http://www.ebi.ac.uk/~zerbino/velvet/velvet_latest.tgz
+tar -zxf velvet_latest.tgz
+rm velvet_latest.tgz
+version=$(ls | awk -F_ '!/latest/ {print $2}')
+cd velvet_$version 
+make 'CATEGORIES=10' 'MAXKMERLENGTH=199' 'LONGSEQUENCES=1'
+ln -s $PWD/velvetg /usr/local/bin/velvetg
+ln -s $PWD/velveth /usr/local/bin/velveth

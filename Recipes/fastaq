@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -e
+version=1.6.0
+cd /tmp
+wget https://github.com/sanger-pathogens/Fastaq/archive/v$version.tar.gz
+tar -zxf v$version.tar.gz
+rm v$version.tar.gz
+cd Fastaq-$version/
+python3 setup.py test
+python3 setup.py install
+cd ..
+rm -fr Fastaq-$version/

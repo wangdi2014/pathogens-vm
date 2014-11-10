@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -e
+
+d=/usr/local/bioinf-recipes/pagit-install
+mkdir $d
+cd $d
+wget ftp://ftp.sanger.ac.uk/pub/resources/software/pagit/PAGIT.V1.64bit.tgz
+tar -zxf PAGIT.V1.64bit.tgz
+rm PAGIT.V1.64bit.tgz
+./installme.sh
+# don’t automatically source PAGIT! Messes up other things, like overrides samtools to pagit version
+# echo source $d/PAGIT/sourceme.pagit >> /etc/bash.bashrc
+echo "To run PAGIT you need to:" >> $HOME/Desktop/README.txt
+echo "source /usr/local/bioinf-recipes/pagit-install/PAGIT/sourceme.pagit" >> $HOME/Desktop/README.txt
+echo "" >> $HOME/Desktop/README.txt

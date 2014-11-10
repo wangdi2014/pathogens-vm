@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -e
+
+version=0.7.6
+d=/usr/local/bioinf-recipes/smalt/
+mkdir $d
+cd $d
+wget http://downloads.sourceforge.net/project/smalt/smalt-$version-bin.tar.gz
+tar -zxf smalt-$version-bin.tar.gz
+rm smalt-$version-bin.tar.gz
+ln -s $d/smalt-$version-bin/smalt_x86_64 /usr/local/bin/smalt

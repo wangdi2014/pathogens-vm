@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -e
+
+version=0.10.0
+cd /tmp
+wget https://github.com/sanger-pathogens/iva/archive/v$version.tar.gz
+tar -zxf v$version.tar.gz
+rm v$version.tar.gz
+cd iva-$version/
+python3 setup.py test
+python3 setup.py install
+cd ..
+rm -fr iva-$version/
