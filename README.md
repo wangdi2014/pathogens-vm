@@ -18,6 +18,7 @@ continue.
 6. Start the virtual machine.
 7. In the virtual machine, run these commands from a terminal
 (the root password is 'manager'):
+
     ```
     sudo apt-get install -y git
     git clone https://github.com/sanger-pathogens/pathogens-vm.git
@@ -25,13 +26,16 @@ continue.
     ./install.set_appearance.sh
     sudo ./install.sh
     ```
+
 8. Shut down the machine.
 9. If you want to check the software that was installed, then restart
 the virtual machine and run this in a terminal:
+
     ```
     cd pathogens-vm
     ./get_versions.pl all_packages.tsv
     ```
+
 10. Optional: run zero-free to make the final exported OVA file smaller
 (see instructions below).
 11. Make the OVA file with File -> Export Appliance in the main
