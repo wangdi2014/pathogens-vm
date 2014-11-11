@@ -4,6 +4,15 @@ pathogens-vm
 To build a virtual machine with some Sanger pathogens software installed
 
 
+How to get and use a virtual machine
+====================================
+
+This README has instructions for how to build a VM. If you just want
+to use one, then please go the
+[pathogens-vm site](http://sanger-pathogens.github.io/pathogens-vm)
+for instructions and download links.
+
+
 How to build a new virtual machine
 ==================================
 
