@@ -106,6 +106,6 @@ name of the new tool. It must be the same as the common name
 packages are installed in the order listed in this file.
 
 4. Commit the changes to this github repository, then
-install as above.
+build the machine as above.
 
 
