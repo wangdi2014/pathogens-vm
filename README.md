@@ -4,6 +4,15 @@ pathogens-vm
 To build a virtual machine with some Sanger pathogens software installed
 
 
+How to get and use a virtual machine
+====================================
+
+This README has instructions for how to build a VM. If you just want
+to use one, then please go the
+[pathogens-vm site](http://sanger-pathogens.github.io/pathogens-vm)
+for instructions and download links.
+
+
 How to build a new virtual machine
 ==================================
 
@@ -62,5 +71,50 @@ After it boots, choose 'Drop to root shell prompt'.
     zerofree -v /dev/sda1
     shutdown -h now
     ```
+
+
+How to add new software
+=======================
+
+1. The software must be available with apt-get or you need
+to write a script, which will be run as root, 
+that can install the software. If you write a script, put
+it in the `Recipes/` directory. The script should put any compiled
+code into a new directory called `/usr/local/bioinf-recipes/tool_name/`,
+and put (soft links to) executables in `/usr/local/bin/`.
+
+2. If the software has any non-bioinformatics dependencies, such
+as packages from apt-get, Perl modules or Python packages, edit
+the file `install.sh` to install them.
+
+2. Add a new line to the file `all_packages.tsv`. The format is
+five tab-delimited columns:
+  * common name of the software. This must have the same
+    name as the script put in `Recipes/`
+    used to install the software, if applicable.
+  * package name, ie the name to be used if apt-get is
+    going to be used to install the package.
+  * The install method. Values can be: 'none' if
+    it comes already installed, 'apt-get' if it is
+    be installed using apt-get, 'recipe' if a custom
+    script is to be used. Note 'none' is there so that
+    the script `get_versions.pl` can report installed 
+    version number of software we are interested in, but
+    is installed on Bio-Linux already.
+  * A command to run that should output the version either
+    to stdout or stderr, amongst an arbitrary number of lines.
+  * A Perl regular expression that will match the whole line 
+    that has the version number, so that the version will be stored in
+    the variable `$1`. This regular expression gets
+    `^` prepended and `$` appended, so it looks for 
+    a complete line that matches.
+
+3. Add a new line to the file `to_install.txt`, with just the
+name of the new tool. It must be the same as the common name
+(in column 1) of the file `all_packages.tsv`. The software
+packages are installed in the order listed in this file.
+
+4. Commit the changes to this github repository, then
+build the machine as above.
 
 
