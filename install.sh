@@ -33,7 +33,7 @@ prodigal \
 aragorn \
 libdatetime-perl \
 libxml-simple-perl \
-parallel \ 
+parallel \
 tabix
 do
     echo
@@ -50,7 +50,8 @@ done
 for module in \
 File::Which \
 File::Spec::Link \
-Moose
+Moose \
+Bio::Roary
 do
     echo
     echo "--------------------- installing Perl $module ... ----------------------"
