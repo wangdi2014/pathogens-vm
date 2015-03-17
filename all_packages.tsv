@@ -3,6 +3,7 @@ abacas	abacas	recipe	abacas.1.3.1.pl	ABACAS.(.*)
 artemis	bio-linux-artemis	none	dpkg -s bio-linux-artemis	Version: (.*)
 assembly-stats	assembly-stats	recipe	assembly-stats -v	Version: (.*)
 augustus	augustus	recipe	augustus --version	AUGUSTUS \((.*)\) is a gene.*
+barrnap	barrnap	recipe	barrnap --version	barrnap (.*)
 bcftools	bcftools	none	bcftools	Version: (.*)
 blast2	blast2	none	dpkg -s blast2	Version: (.*)
 bowtie2	bowtie2	none	bowtie2 --version	.*bowtie2.* version (.*)

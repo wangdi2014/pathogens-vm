@@ -1,6 +1,7 @@
 abacas
 assembly-stats
 augustus
+barrnap
 fastaq
 figtree
 gubbins

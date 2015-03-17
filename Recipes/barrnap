@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -e
+cd /opt
+git clone https://github.com/Victorian-Bioinformatics-Consortium/barrnap.git
+ln -s /opt/barrnap/bin/barrnap /usr/local/bin/barrnap
