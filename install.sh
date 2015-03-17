@@ -29,6 +29,11 @@ python-setuptools \
 python3-dev \
 python3-numpy \
 python3-setuptools \
+prodigal \
+aragorn \
+libdatetime-perl \
+libxml-simple-perl \
+parallel \ 
 tabix
 do
     echo
