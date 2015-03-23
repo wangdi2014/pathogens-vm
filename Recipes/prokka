@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -e
+cd /opt
+git clone https://github.com/Victorian-Bioinformatics-Consortium/prokka.git
+ln -s /opt/prokka/bin/prokka /usr/local/bin/prokka
+prokka --setupdb
+mkdir -p /home/manager/data/
+wget -O /opt/prokka/db/genus/Salmonella.phr "ftp://ftp.sanger.ac.uk/pub/project/pathogens/VM_data/Salmonella.phr"
+wget -O /opt/prokka/db/genus/Salmonella.pin "ftp://ftp.sanger.ac.uk/pub/project/pathogens/VM_data/Salmonella.pin"
+wget -O /opt/prokka/db/genus/Salmonella.psq "ftp://ftp.sanger.ac.uk/pub/project/pathogens/VM_data/Salmonella.psq"
+wget -O /home/manager/data/Typhi_data.tar.gz  "ftp://ftp.sanger.ac.uk/pub/project/pathogens/VM_data/Typhi_data.tar.gz"
+cd /home/manager/data/
+tar xfz /home/manager/data/Typhi_data.tar.gz
+rm /home/manager/data/Typhi_data.tar.gz
+wget -O /tmp/linux64.tbl2asn.gz "ftp://ftp.ncbi.nih.gov/toolbox/ncbi_tools/converters/by_program/tbl2asn/linux64.tbl2asn.gz"
+gunzip /tmp/linux64.tbl2asn.gz
+mv /tmp/linux64.tbl2asn /usr/bin/tbl2asn 

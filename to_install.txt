@@ -1,6 +1,7 @@
 abacas
 assembly-stats
 augustus
+barrnap
 fastaq
 figtree
 gubbins
@@ -8,6 +9,7 @@ kmc
 smalt
 iva
 pagit
+prokka
 reapr
 tabix
 velvet
