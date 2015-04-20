@@ -6,14 +6,15 @@ sed -i 's"/home/manager:/bin/zsh"/home/manager:/bin/bash"' /etc/passwd
 
 
 apt-get update
+apt-get upgrade
 
-mkdir /usr/local/bioinf-recipes
+mkdir -p /usr/local/bioinf-recipes
 
 # dnaplotter is installed as part of bio-linux-artemis,
 # but is not in user's path so needs fixing
 awk '$0~/^ARTEMIS_HOME=/ {$0="ARTEMIS_HOME=/usr/local/bioinf/artemis/artemis/"} {print}' /usr/local/bioinf/artemis/artemis/dnaplotter > tmp
 mv tmp /usr/local/bioinf/artemis/artemis/dnaplotter
-ln -s /usr/local/bioinf/artemis/artemis/dnaplotter /usr/local/bin
+ln -s -f /usr/local/bioinf/artemis/artemis/dnaplotter /usr/local/bin
 chmod 755 /usr/local/bioinf/artemis/artemis/dnaplotter
 
 

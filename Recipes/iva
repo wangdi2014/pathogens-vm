@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
-version=0.10.0
+version=0.11.5
 cd /tmp
+rm -f v$version.tar.gz
 wget https://github.com/sanger-pathogens/iva/archive/v$version.tar.gz
 tar -zxf v$version.tar.gz
 rm v$version.tar.gz
