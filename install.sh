@@ -35,6 +35,11 @@ aragorn \
 libdatetime-perl \
 libxml-simple-perl \
 parallel \
+fasttree \
+prank \
+mafft \
+exonerate \
+fasttree \
 tabix
 do
     echo
