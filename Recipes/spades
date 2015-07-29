@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -e
+
+version=3.5.0
+d=/usr/local/bioinf-recipes/spades
+mkdir $d
+cd $d
+
+wget http://spades.bioinf.spbau.ru/release$version/SPAdes-$version-Linux.tar.gz
+tar -xzf SPAdes-$version-Linux.tar.gz
+rm SPAdes-$version-Linux.tar.gz
+ln -s $d/SPAdes-$version-Linux/bin/spades.py /usr/local/bin/spades.py

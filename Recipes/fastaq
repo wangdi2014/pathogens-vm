@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -e
-version=1.6.0
+version=3.6.0
 cd /tmp
 wget https://github.com/sanger-pathogens/Fastaq/archive/v$version.tar.gz
 tar -zxf v$version.tar.gz
