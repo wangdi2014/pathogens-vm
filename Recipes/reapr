@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-version=1.0.17
+version=1.0.18
 d=/usr/local/bioinf-recipes/reapr
 mkdir $d
 cd $d
