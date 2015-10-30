@@ -40,7 +40,8 @@ prank \
 mafft \
 exonerate \
 fasttree \
-tabix
+tabix \
+virtualbox-guest-dkms
 do
     echo
     echo "----------------------- installing $package ... ----------------------"
