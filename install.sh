@@ -30,6 +30,7 @@ python-setuptools \
 python3-dev \
 python3-numpy \
 python3-setuptools \
+python3-pip \
 prodigal \
 aragorn \
 libdatetime-perl \
@@ -72,9 +73,11 @@ done
 
 echo "--------------------- installing Python pip etc ... ------------------------"
 easy_install pip
-easy_install3 pip
 pip install pysam
 pip3 install pysam
+pip3 install jupyter
+pip3 install bash_kernel
+python3 -m bash_kernel.install
 echo "--------------------- installed Python pip etc ... ------------------------"
 
 touch $HOME/Desktop/README.txt
