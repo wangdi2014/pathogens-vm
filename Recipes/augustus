@@ -11,7 +11,7 @@ version=$(ls | awk -F"-" '!/current/ {print $2}')
 cd augustus-$version/
 make
 make install
-chmod -R +rx /opt/augustus-3.2.1/
+chmod -R +rx /opt/augustus-$version/
 
 # add 3D7 data
 /usr/local/bioinf-recipes/augustus/augustus-3.2.1/config/
