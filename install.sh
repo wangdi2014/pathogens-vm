@@ -64,7 +64,9 @@ for module in \
 File::Which \
 File::Spec::Link \
 Moose \
-Bio::Roary
+Bio::Roary \
+Statistics::Descriptive \
+GD::Graph::histogram
 do
     echo
     echo "--------------------- installing Perl $module ... ----------------------"
