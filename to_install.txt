@@ -19,3 +19,4 @@ tabix
 velvet
 spades
 circlator
+lumpy-sv

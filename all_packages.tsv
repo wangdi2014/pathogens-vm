@@ -21,6 +21,7 @@ gubbins	gubbins	recipe	gubbins	Version: (.*)
 igv	igv	recipe	ls -lh $(which igv.sh)	.* -> .*igv-(.*)/igv.sh
 iva	iva	recipe	iva --version	(.*)
 kmc	kmc	recipe	kmc	K-Mer Counter \(KMC\) ver. (.*) \(.*\)
+lumpy-sv	lumpy-sv	recipe	lumpy	Program:.*\(v (.*)\)
 mummer	mummer	none	dpkg -s mummer	Version: (.*)
 ncbi-blast+	ncbi-blast+	apt-get	dpkg -s ncbi-blast+	Version: (.*)
 pagit	pagit	recipe	cat /usr/local/bioinf-recipes/pagit-install/README.txt	tar czvf PAGIT.(.*).64bit.tgz
