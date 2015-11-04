@@ -6,6 +6,7 @@ fastaq
 figtree
 fastml
 gubbins
+igv
 kmc
 sambamba
 samblaster

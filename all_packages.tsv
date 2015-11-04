@@ -18,6 +18,7 @@ fastaq	fastaq	recipe	fastaq version	(\d+\.\d+\.\d+)
 fastml	fastml	recipe	ls -lh $(which fastml)	.* -> .*FastML\.(v.*)/programs.*
 figtree	figtree	apt-get	dpkg -s figtree	Version: (.*)
 gubbins	gubbins	recipe	gubbins	Version: (.*)
+igv	igv	recipe	ls -lh $(which igv.sh)	.* -> .*igv-(.*)/igv.sh
 iva	iva	recipe	iva --version	(.*)
 kmc	kmc	recipe	kmc	K-Mer Counter \(KMC\) ver. (.*) \(.*\)
 mummer	mummer	none	dpkg -s mummer	Version: (.*)
