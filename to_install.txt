@@ -6,6 +6,7 @@ fastaq
 figtree
 fastml
 gubbins
+htsbox
 igv
 kmc
 sambamba

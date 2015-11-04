@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -e
+
+version=r312
+d=/usr/local/bioinf-recipes/htsbox/
+mkdir $d
+cd $d
+wget https://github.com/lh3/htsbox/archive/$version.tar.gz
+tar -zxf $version.tar.gz
+rm $version.tar.gz
+cd htsbox-$version
+make
+ln -s $d/htsbox-$version/htsbox /usr/local/bin/htsbox
