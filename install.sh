@@ -114,3 +114,7 @@ chmod 755 ~/Desktop/act.desktop
 
 chown manager:manager ~/Desktop/artemis.desktop ~/Desktop/act.desktop
 ./get_uniprot_dbs.sh
+
+# shared folders belong to the group "vboxsf".
+# Need to add the user manager to this group, so shared folders work
+usermod -a -G vboxsf manager
