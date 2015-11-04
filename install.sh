@@ -20,11 +20,13 @@ chmod 755 /usr/local/bioinf/artemis/artemis/dnaplotter
 
 # install core modules
 for package in \
+check \
 cpanminus \
 flashplugin-installer \
 libboost-iostreams-dev \
 libboost-system-dev \
 libboost-filesystem-dev \
+libtool \
 python-numpy \
 python-setuptools \
 python3-dev \
