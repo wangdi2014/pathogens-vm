@@ -20,6 +20,8 @@ chmod 755 /usr/local/bioinf/artemis/artemis/dnaplotter
 
 # install core modules
 for package in \
+bamtools \
+libbamtools-dev \
 check \
 cpanminus \
 flashplugin-installer \
