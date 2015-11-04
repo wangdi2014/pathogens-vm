@@ -46,7 +46,8 @@ mafft \
 exonerate \
 fasttree \
 tabix \
-virtualbox-guest-dkms
+virtualbox-guest-dkms \
+zerofree
 do
     echo
     echo "----------------------- installing $package ... ----------------------"
