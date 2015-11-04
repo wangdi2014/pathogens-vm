@@ -25,6 +25,7 @@ ncbi-blast+	ncbi-blast+	apt-get	dpkg -s ncbi-blast+	Version: (.*)
 pagit	pagit	recipe	cat /usr/local/bioinf-recipes/pagit-install/README.txt	tar czvf PAGIT.(.*).64bit.tgz
 prokka	prokka	recipe	prokka --version	prokka (.*)
 reapr	reapr	recipe	reapr	REAPR version: (.*)
+sambamba	sambamba	recipe	sambamba	sambamba v(.*)
 samblaster	samblaster	recipe	samblaster -h	samblaster: Version (.*)
 samtools	samtools	none	samtools	Version: (.*)
 seaview	seaview	none	dpkg -s seaview	Version: (.*)

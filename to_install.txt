@@ -7,6 +7,7 @@ figtree
 fastml
 gubbins
 kmc
+sambamba
 samblaster
 smalt
 iva

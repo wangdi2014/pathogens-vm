@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -e
+
+version=0.5.9
+d=/usr/local/bioinf-recipes/sambamba/
+mkdir $d
+cd $d
+wget https://github.com/lomereiter/sambamba/releases/download/v$version/sambamba_v$version\_linux.tar.bz2
+tar -xjf sambamba_v$version\_linux.tar.bz2
+rm sambamba_v$version\_linux.tar.bz2
+chmod 755 sambamba_v$version
+ln -s $d/sambamba_v$version /usr/local/bin/sambamba
