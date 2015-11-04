@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -e
+
+version=v3.1
+d=/usr/local/bioinf-recipes/fastml/
+mkdir $d
+cd $d
+wget http://fastml.tau.ac.il/source/FastML.$version.tgz
+tar -zxf FastML.$version.tgz
+rm FastML.$version.tgz
+cd FastML.$version
+make
+ln -s $d/FastML.$version/programs/fastml/fastml /usr/local/bin/fastml

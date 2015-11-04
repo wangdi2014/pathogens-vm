@@ -15,6 +15,7 @@ cufflinks	cufflinks	none	cufflinks	cufflinks v(.*)
 emboss	emboss	apt-get	dpkg -s emboss	Version: (.*)
 fasta	bio-linux-fasta	none	dpkg -s bio-linux-fasta	Version: (.*)
 fastaq	fastaq	recipe	fastaq version	(\d+\.\d+\.\d+)
+fastml	fastml	recipe	ls -lh $(which fastml)	.* -> .*FastML\.(v.*)/programs.*
 figtree	figtree	apt-get	dpkg -s figtree	Version: (.*)
 gubbins	gubbins	recipe	gubbins	Version: (.*)
 iva	iva	recipe	iva --version	(.*)

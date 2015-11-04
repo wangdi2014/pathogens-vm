@@ -4,6 +4,7 @@ augustus
 barrnap
 fastaq
 figtree
+fastml
 gubbins
 kmc
 smalt
