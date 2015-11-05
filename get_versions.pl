@@ -11,6 +11,6 @@ if (@ARGV != 1) {
 my $all_packages_file = $ARGV[0];
 my $package_info = Helper::load_all_packages_info($all_packages_file);
 
-for (sort keys %{$package_info}) {
+for (sort { "\L$a" cmp "\L$b" } keys %{$package_info}) {
     print "$_\t" . $package_info->{$_}->get_version() . "\n";
 }
