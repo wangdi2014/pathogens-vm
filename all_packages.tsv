@@ -33,6 +33,7 @@ reapr	reapr	recipe	reapr	REAPR version: (.*)
 sambamba	sambamba	recipe	sambamba	sambamba v(.*)
 samblaster	samblaster	recipe	samblaster -h	samblaster: Version (.*)
 samtools	samtools	none	samtools	Version: (.*)
+samtools-1	samtools-1	recipe	samtools-1	Version: (.*) \(using.*
 seaview	seaview	none	dpkg -s seaview	Version: (.*)
 smalt	smalt	recipe	smalt version	Version: (.*)
 spades	spades	recipe	spades.py	SPAdes genome assembler (v.*)
