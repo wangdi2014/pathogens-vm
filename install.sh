@@ -85,6 +85,9 @@ pip3 install pysam
 pip3 install jupyter
 pip3 install bash_kernel
 python3 -m bash_kernel.install
+# Need this, otherwise jupyter only works as root
+chown manager:manager -R ~/.local/share/jupyter/
+
 echo "--------------------- installed Python pip etc ... ------------------------"
 
 touch $HOME/Desktop/README.txt
