@@ -55,8 +55,8 @@ the correct date. The format should be OVF 1.0. Click Continue, then
 change the Name to pathogens-vm YYYY-MM-DD, and click Export.
 
 
-How to run zero-free
-====================
+How to run zero-free and shrink the vdi file
+============================================
 
 1. Boot the machine. As soon as it starts booting, hold down
 the shift key to bring up the GRUB menu, stopping it from
@@ -64,7 +64,9 @@ booting as usual into Bio-Linux.
 2. Select 'Advanced options for Bio-Linux 8', then
 'Bio-Linux 8, with Linux 3.13.0-32-generic (recovery mode)'.
 After it boots, choose 'Drop to root shell prompt'.
-3. Run these commands:
+3. Check the type of filesystem with `df -T`. It is probably
+`ext3` or `ext4`. Put the right one in the command below.
+4. Run these commands:
 
     ```
     mount -n -o remount,ro -t ext3 /dev/sda1 /
@@ -72,6 +74,12 @@ After it boots, choose 'Drop to root shell prompt'.
     shutdown -h now
     ```
 
+5. On the host machine (assuming a Mac), clone the vdi file,
+which makes a compacted new version:
+
+    ```
+    VboxManage clonehd current.vdi clone.vdi
+    ```
 
 How to add new software
 =======================
