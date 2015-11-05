@@ -2,6 +2,7 @@ abacas
 assembly-stats
 augustus
 barrnap
+bcftools-1
 bedtools
 fastaq
 figtree

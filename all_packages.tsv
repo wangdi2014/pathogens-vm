@@ -5,6 +5,7 @@ assembly-stats	assembly-stats	recipe	assembly-stats -v	Version: (.*)
 augustus	augustus	recipe	augustus --version	AUGUSTUS \((.*)\) is a gene.*
 barrnap	barrnap	recipe	barrnap --version	barrnap (.*)
 bcftools	bcftools	none	bcftools	Version: (.*)
+bcftools-1	bcftools-1	recipe	bcftools-1	Version: (.*) \(using.*
 bedtools	bedtools	recipe	bedtools --version	bedtools (.*)
 blast2	blast2	none	dpkg -s blast2	Version: (.*)
 bowtie2	bowtie2	none	bowtie2 --version	.*bowtie2.* version (.*)
