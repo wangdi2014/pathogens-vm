@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -e
+
+# Why not just use pip?
+# Because, for some unknown reason, it complains that
+# the version of python is not 2.7, even though it is.
+# But setup.py install works fine.
+
+version=2.1.0.20150420
+d=/usr/local/bioinf-recipes/MACS2
+mkdir $d
+cd $d
+wget https://pypi.python.org/packages/source/M/MACS2/MACS2-$version.1.tar.gz
+tar -zxf MACS2-$version.1.tar.gz
+rm MACS2-$version.1.tar.gz
+cd MACS2-$version
+python setup.py install
