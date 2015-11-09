@@ -15,6 +15,7 @@ PBcR
 sambamba
 samblaster
 smalt
+ucsc_tools
 iva
 pagit
 prokka

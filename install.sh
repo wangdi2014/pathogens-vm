@@ -38,6 +38,8 @@ python3-pip \
 prodigal \
 aragorn \
 libdatetime-perl \
+libmysqlclient-dev \
+libssl-dev \
 libxml-simple-perl \
 parallel \
 fasttree \

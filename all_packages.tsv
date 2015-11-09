@@ -42,4 +42,5 @@ spades	spades	recipe	spades.py	SPAdes genome assembler (v.*)
 svtyper	svtyper	recipe	svtyper -h	version: \$Revision: (.*) \$
 tabix	tabix	apt-get	tabix	Version: (.*)
 tophat2	tophat	none	tophat2 --version	TopHat v(.*)
+ucsc_tools	ucsc_tools	recipe	ls -lh $(which addCols)	.* -> .*/userApps-(\d+)\/.*
 velvet	velvet	recipe	velveth	Version (.*)

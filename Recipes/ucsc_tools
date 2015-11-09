@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -e
+
+version=324
+d=/usr/local/bioinf-recipes/ucsc_tools
+mkdir $d
+cd $d
+wget http://hgdownload.cse.ucsc.edu/admin/exe/userApps.v$version.src.tgz
+tar -zxf userApps.v$version.src.tgz
+mv userApps userApps-$version
+cd userApps-$version
+make
+cd /usr/local/bin/
+cp -s $d/userApps-$version/bin/* .
