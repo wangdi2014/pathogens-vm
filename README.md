@@ -78,7 +78,7 @@ After it boots, choose 'Drop to root shell prompt'.
 which makes a compacted new version:
 
     ```
-    VboxManage clonehd current.vdi clone.vdi
+    VBoxManage clonehd current.vdi clone.vdi
     ```
 
 How to add new software
