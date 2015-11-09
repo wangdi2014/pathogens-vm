@@ -10,3 +10,4 @@ cd samtools-$version
 make
 ln -s /usr/local/bioinf-recipes/samtools-$version/samtools /usr/local/bin/samtools-$version
 ln -s /usr/local/bioinf-recipes/samtools-$version/samtools /usr/local/bin/samtools-1
+ln -s /usr/local/bioinf-recipes/samtools-$version/misc/plot-bamstats /usr/local/bin/plot-bamstats
