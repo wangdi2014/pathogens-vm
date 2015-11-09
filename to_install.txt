@@ -13,6 +13,7 @@ igv
 kmc
 MACS2
 PBcR
+phantomPeakQualTools
 sambamba
 samblaster
 smalt
