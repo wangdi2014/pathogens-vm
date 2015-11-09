@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -e
+
+version=0.0.2
+d=/usr/local/bioinf-recipes/svtyper/
+mkdir $d
+cd $d
+wget https://github.com/hall-lab/svtyper/archive/v$version.tar.gz
+tar -zxf v$version.tar.gz
+rm v$version.tar.gz
+ln -s $d/svtyper-0.0.2/svtyper /usr/local/bin/svtyper

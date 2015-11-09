@@ -20,6 +20,7 @@ pagit
 prokka
 reapr
 samtools-1
+svtyper
 tabix
 velvet
 spades

@@ -39,6 +39,7 @@ samtools-1	samtools-1	recipe	samtools-1	Version: (.*) \(using.*
 seaview	seaview	none	dpkg -s seaview	Version: (.*)
 smalt	smalt	recipe	smalt version	Version: (.*)
 spades	spades	recipe	spades.py	SPAdes genome assembler (v.*)
+svtyper	svtyper	recipe	svtyper -h	version: \$Revision: (.*) \$
 tabix	tabix	apt-get	tabix	Version: (.*)
 tophat2	tophat	none	tophat2 --version	TopHat v(.*)
 velvet	velvet	recipe	velveth	Version (.*)
