@@ -39,6 +39,7 @@ samblaster	samblaster	recipe	samblaster -h	samblaster: Version (.*)
 samtools	samtools	none	samtools	Version: (.*)
 samtools-1	samtools-1	recipe	samtools-1	Version: (.*) \(using.*
 seaview	seaview	none	dpkg -s seaview	Version: (.*)
+seqtk	seqtk	apt-get	seqtk	Version: (.*)
 smalt	smalt	recipe	smalt version	Version: (.*)
 spades	spades	recipe	spades.py	SPAdes genome assembler (v.*)
 svtyper	svtyper	recipe	svtyper -h	version: \$Revision: (.*) \$

@@ -16,6 +16,7 @@ PBcR
 phantomPeakQualTools
 sambamba
 samblaster
+seqtk
 smalt
 ucsc_tools
 iva
