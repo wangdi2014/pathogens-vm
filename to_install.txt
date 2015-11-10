@@ -21,6 +21,7 @@ samblaster
 seqtk
 smalt
 ucsc_tools
+vcflib
 vt
 iva
 pagit

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -e
+
+version=1.0.0-rc0
+cd /usr/local/bioinf-recipes/
+git clone --recursive https://github.com/ekg/vcflib.git
+cd vcflib
+git checkout v$version
+git submodule update --recursive
+make
+cd /usr/local/bin
+cp -s /usr/local/bioinf-recipes/vcflib/bin/* .
