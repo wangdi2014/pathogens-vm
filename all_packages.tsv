@@ -22,6 +22,7 @@ freebayes	freebayes	recipe	freebayes	version:  v(.*)
 gubbins	gubbins	recipe	gubbins	Version: (.*)
 htsbox	htsbox	recipe	htsbox	Version: htslib lite-.*, htsbox (.*)
 igv	igv	recipe	ls -lh $(which igv.sh)	.* -> .*igv-(.*)/igv.sh
+icorn2	icorn2	recipe	ls -lh $(which icorn2.sh)	.*/ICORN2-([0-9.]+)/.*
 iva	iva	recipe	iva --version	(.*)
 kmc	kmc	recipe	kmc	K-Mer Counter \(KMC\) ver. (.*) \(.*\)
 lumpy-sv	lumpy-sv	recipe	lumpy	Program:.*\(v (.*)\)

@@ -11,6 +11,7 @@ freebayes
 gubbins
 htsbox
 igv
+icorn2
 kmc
 MACS2
 mutatrix

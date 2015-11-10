@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -e
+
+version=0.95
+d=/usr/local/bioinf-recipes/icorn2
+mkdir $d
+cd $d
+wget ftp://ftp.sanger.ac.uk/pub4/resources/software/pagit/ICORN2/icorn2.V$version.tgz
+tar -zxf icorn2.V$version.tgz
+rm icorn2.V$version.tgz
+mv ICORN2 ICORN2-$version
+echo "export PATH=$PWD/ICORN2-$version/:\$PATH" >> ~/.bashrc
