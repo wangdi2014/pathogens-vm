@@ -18,6 +18,7 @@ fasta	bio-linux-fasta	none	dpkg -s bio-linux-fasta	Version: (.*)
 fastaq	fastaq	recipe	fastaq version	(\d+\.\d+\.\d+)
 fastml	fastml	recipe	ls -lh $(which fastml)	.* -> .*FastML\.(v.*)/programs.*
 figtree	figtree	apt-get	dpkg -s figtree	Version: (.*)
+freebayes	freebayes	recipe	freebayes	version:  v(.*)
 gubbins	gubbins	recipe	gubbins	Version: (.*)
 htsbox	htsbox	recipe	htsbox	Version: htslib lite-.*, htsbox (.*)
 igv	igv	recipe	ls -lh $(which igv.sh)	.* -> .*igv-(.*)/igv.sh

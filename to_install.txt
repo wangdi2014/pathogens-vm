@@ -7,6 +7,7 @@ bedtools
 fastaq
 figtree
 fastml
+freebayes
 gubbins
 htsbox
 igv
