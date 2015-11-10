@@ -9,4 +9,4 @@ wget ftp://ftp.sanger.ac.uk/pub4/resources/software/pagit/ICORN2/icorn2.V$versio
 tar -zxf icorn2.V$version.tgz
 rm icorn2.V$version.tgz
 mv ICORN2 ICORN2-$version
-echo "export PATH=$PWD/ICORN2-$version/:\$PATH" >> ~/.bashrc
+echo "export PATH=\$PATH:$PWD/ICORN2-$version/" >> ~/.bashrc
