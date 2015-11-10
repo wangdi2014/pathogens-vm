@@ -26,6 +26,7 @@ kmc	kmc	recipe	kmc	K-Mer Counter \(KMC\) ver. (.*) \(.*\)
 lumpy-sv	lumpy-sv	recipe	lumpy	Program:.*\(v (.*)\)
 MACS2	MACS2	recipe	macs2 --version	macs2 (.*)
 mummer	mummer	none	dpkg -s mummer	Version: (.*)
+mutatrix	mutatrix	recipe	cd /usr/local/bioinf-recipes/mutatrix/ && git rev-parse HEAD	(.*)
 ncbi-blast+	ncbi-blast+	apt-get	dpkg -s ncbi-blast+	Version: (.*)
 pagit	pagit	recipe	cat /usr/local/bioinf-recipes/pagit-install/README.txt	tar czvf PAGIT.(.*).64bit.tgz
 PBcR	PBcR	recipe	ls -lh $(which PBcR)	.*/wgs-(.*)/Linux.*
@@ -47,3 +48,4 @@ tabix	tabix	apt-get	tabix	Version: (.*)
 tophat2	tophat	none	tophat2 --version	TopHat v(.*)
 ucsc_tools	ucsc_tools	recipe	ls -lh $(which addCols)	.* -> .*/userApps-(\d+)\/.*
 velvet	velvet	recipe	velveth	Version (.*)
+vt	vt	recipe	ls -lh $(which vt)	.* -> .*/vt-(.*)/vt

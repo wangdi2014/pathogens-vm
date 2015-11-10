@@ -12,6 +12,7 @@ htsbox
 igv
 kmc
 MACS2
+mutatrix
 PBcR
 phantomPeakQualTools
 sambamba
@@ -19,6 +20,7 @@ samblaster
 seqtk
 smalt
 ucsc_tools
+vt
 iva
 pagit
 prokka

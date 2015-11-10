@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -e
+
+
+# No releases, so just clone the repo
+cd /usr/local/bioinf-recipes/
+git clone --recursive https://github.com/ekg/mutatrix.git
+cd mutatrix
+make
+ln -s $PWD/mutatrix /usr/local/bin/mutatrix
