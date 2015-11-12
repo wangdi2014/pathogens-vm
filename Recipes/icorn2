@@ -10,3 +10,4 @@ tar -zxf icorn2.V$version.tgz
 rm icorn2.V$version.tgz
 mv ICORN2 ICORN2-$version
 echo "export PATH=\$PATH:$PWD/ICORN2-$version/" >> ~/.bashrc
+echo "export ICORN2_THREADS=4" >> ~/.bashrc
