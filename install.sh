@@ -29,6 +29,7 @@ libboost-iostreams-dev \
 libboost-system-dev \
 libboost-filesystem-dev \
 libtool \
+pandoc \
 python-numpy \
 python-setuptools \
 python3-dev \
@@ -89,6 +90,7 @@ pip3 install bash_kernel
 python3 -m bash_kernel.install
 # Need this, otherwise jupyter only works as root
 chown manager:manager -R ~/.local/share/jupyter/
+chown manager:manager -R ~/.ipython/
 
 echo "--------------------- installed Python pip etc ... ------------------------"
 
