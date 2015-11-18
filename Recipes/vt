@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -e
+
+version=0.57
+d=/usr/local/bioinf-recipes/vt/
+mkdir $d
+cd $d
+wget https://github.com/atks/vt/archive/$version.tar.gz
+tar -zxf $version.tar.gz
+rm $version.tar.gz
+cd vt-$version
+make
+ln -s $d/vt-$version/vt /usr/local/bin/vt

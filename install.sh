@@ -20,19 +20,27 @@ chmod 755 /usr/local/bioinf/artemis/artemis/dnaplotter
 
 # install core modules
 for package in \
+bamtools \
+libbamtools-dev \
+check \
 cpanminus \
 flashplugin-installer \
 libboost-iostreams-dev \
 libboost-system-dev \
 libboost-filesystem-dev \
+libtool \
+pandoc \
 python-numpy \
 python-setuptools \
 python3-dev \
 python3-numpy \
 python3-setuptools \
+python3-pip \
 prodigal \
 aragorn \
 libdatetime-perl \
+libmysqlclient-dev \
+libssl-dev \
 libxml-simple-perl \
 parallel \
 fasttree \
@@ -40,7 +48,9 @@ prank \
 mafft \
 exonerate \
 fasttree \
-tabix
+tabix \
+virtualbox-guest-dkms \
+zerofree
 do
     echo
     echo "----------------------- installing $package ... ----------------------"
@@ -57,7 +67,9 @@ for module in \
 File::Which \
 File::Spec::Link \
 Moose \
-Bio::Roary
+Bio::Roary \
+Statistics::Descriptive \
+GD::Graph::histogram
 do
     echo
     echo "--------------------- installing Perl $module ... ----------------------"
@@ -71,9 +83,15 @@ done
 
 echo "--------------------- installing Python pip etc ... ------------------------"
 easy_install pip
-easy_install3 pip
 pip install pysam
 pip3 install pysam
+pip3 install jupyter
+pip3 install bash_kernel
+python3 -m bash_kernel.install
+# Need this, otherwise jupyter only works as root
+chown manager:manager -R ~/.local/share/jupyter/
+chown manager:manager -R ~/.ipython/
+
 echo "--------------------- installed Python pip etc ... ------------------------"
 
 touch $HOME/Desktop/README.txt
@@ -106,3 +124,7 @@ chmod 755 ~/Desktop/act.desktop
 
 chown manager:manager ~/Desktop/artemis.desktop ~/Desktop/act.desktop
 ./get_uniprot_dbs.sh
+
+# shared folders belong to the group "vboxsf".
+# Need to add the user manager to this group, so shared folders work
+usermod -a -G vboxsf manager

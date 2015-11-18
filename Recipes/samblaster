@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -e
+
+version=0.1.22
+d=/usr/local/bioinf-recipes/samblaster/
+mkdir $d
+cd $d
+wget https://github.com/GregoryFaust/samblaster/releases/download/v.$version/samblaster-v.$version.tar.gz
+tar -zxf samblaster-v.$version.tar.gz
+rm samblaster-v.$version.tar.gz
+cd samblaster-v.$version
+make
+ln -s $d/samblaster-v.$version/samblaster /usr/local/bin/samblaster
+

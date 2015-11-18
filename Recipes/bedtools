@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -e
+
+# remove the old vresion installed from biolinux repo
+apt-get remove -y bedtools
+
+version=2.25.0
+d=/usr/local/bioinf-recipes/bedtools/
+mkdir $d
+cd $d
+wget https://github.com/arq5x/bedtools2/archive/v$version.tar.gz
+tar -zxf v$version.tar.gz
+rm v$version.tar.gz
+cd bedtools2-$version
+make
+cd /usr/local/bin/
+cp -s  $d/bedtools2-$version/bin/* .

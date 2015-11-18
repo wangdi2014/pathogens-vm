@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -e
+
+version=0.9.21
+cd /usr/local/bioinf-recipes/
+git clone --recursive https://github.com/ekg/freebayes.git
+cd freebayes
+git checkout v$version
+git submodule update --recursive
+make
+make install

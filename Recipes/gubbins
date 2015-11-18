@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
 set -e
 
-cd /tmp
-wget  http://pypi.python.org/packages/source/D/DendroPy/DendroPy-3.12.0.tar.gz
-tar xzvf DendroPy-3.12.0.tar.gz
-cd DendroPy-3.12.0
-sudo python setup.py install
-cd ..
-rm -fr DendroPy-3.12.0*
-sudo add-apt-repository --yes ppa:ap13/gubbins
-sudo apt-get update
-sudo apt-get install --force-yes -y fasttree raxml fastml2 gubbins
-
+cd /usr/local/bioinf-recipes/
+git clone https://github.com/sanger-pathogens/gubbins.git
+cd gubbins
+autoreconf -i
+./configure
+make
+make check
+make install
+# fix to find gubbins library. Stops this error:
+# error while loading shared libraries: libgubbins.so.0
+rm /usr/local/bin/gubbins
+ln -s /usr/local/bioinf-recipes/gubbins/src/gubbins /usr/local/bin/gubbins

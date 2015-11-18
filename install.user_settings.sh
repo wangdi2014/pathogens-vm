@@ -12,3 +12,6 @@ cp desktop_background_sanger.jpg ~/Pictures/
 chmod 644 ~/Pictures/desktop_background_sanger.jpg
 gsettings set org.gnome.desktop.background picture-uri file:///home/manager/Pictures/desktop_background_sanger.jpg
 
+# Set up a bin directory
+mkdir ~/bin
+echo 'export PATH=$HOME/bin/:$PATH' >> ~/.bashrc

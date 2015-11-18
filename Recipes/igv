@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -e
+
+version=2.3.63
+d=/usr/local/bioinf-recipes/igv/
+mkdir $d
+cd $d
+wget https://github.com/igvteam/igv/archive/v$version.tar.gz
+tar -zxf v$version.tar.gz
+rm v$version.tar.gz
+cd igv-$version
+ant
+sed 's/java -Xmx.000m/java -Xmx3000m/' ./scripts/igv.sh > igv.sh
+chmod 755 igv.sh
+ln -s $d/igv-$version/igv.sh /usr/local/bin/igv.sh

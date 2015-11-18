@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -e
+
+version=0.2.11
+d=/usr/local/bioinf-recipes/lumpy-sv/
+mkdir $d
+cd $d
+wget https://github.com/arq5x/lumpy-sv/releases/download/$version/lumpy-sv-$version.tar.gz
+tar -zxf lumpy-sv-$version.tar.gz
+rm lumpy-sv-$version.tar.gz
+cd lumpy-sv
+make
+cd /usr/local/bin
+cp -s $d/lumpy-sv/bin/* .
+echo "export PATH=$PATH:$d/lumpy-sv/scripts" >> ~/.bashrc

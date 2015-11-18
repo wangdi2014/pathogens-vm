@@ -5,6 +5,8 @@ assembly-stats	assembly-stats	recipe	assembly-stats -v	Version: (.*)
 augustus	augustus	recipe	augustus --version	AUGUSTUS \((.*)\) is a gene.*
 barrnap	barrnap	recipe	barrnap --version	barrnap (.*)
 bcftools	bcftools	none	bcftools	Version: (.*)
+bcftools-1	bcftools-1	recipe	bcftools-1	Version: (.*) \(using.*
+bedtools	bedtools	recipe	bedtools --version	bedtools (.*)
 blast2	blast2	none	dpkg -s blast2	Version: (.*)
 bowtie2	bowtie2	none	bowtie2 --version	.*bowtie2.* version (.*)
 bwa	bwa	none	bwa	Version: (.*)
@@ -13,20 +15,40 @@ clustalx	bio-linux-clustal	none	dpkg -s clustalx	Version: (.*)
 cufflinks	cufflinks	none	cufflinks	cufflinks v(.*)
 emboss	emboss	apt-get	dpkg -s emboss	Version: (.*)
 fasta	bio-linux-fasta	none	dpkg -s bio-linux-fasta	Version: (.*)
-fastaq	fastaq	recipe	python3 -c 'import pkg_resources; import fastaq; print(pkg_resources.get_distribution("fastaq").version)'	(.*)
+fastaq	fastaq	recipe	fastaq version	(\d+\.\d+\.\d+)
+fastml	fastml	recipe	ls -lh $(which fastml)	.* -> .*FastML\.(v.*)/programs.*
 figtree	figtree	apt-get	dpkg -s figtree	Version: (.*)
+freebayes	freebayes	recipe	freebayes	version:  v(.*)
 gubbins	gubbins	recipe	gubbins	Version: (.*)
+htsbox	htsbox	recipe	htsbox	Version: htslib lite-.*, htsbox (.*)
+igv	igv	recipe	ls -lh $(which igv.sh)	.* -> .*igv-(.*)/igv.sh
+icorn2	icorn2	recipe	ls -lh $(which icorn2.sh)	.*/ICORN2-([0-9.]+)/.*
 iva	iva	recipe	iva --version	(.*)
 kmc	kmc	recipe	kmc	K-Mer Counter \(KMC\) ver. (.*) \(.*\)
+lumpy-sv	lumpy-sv	recipe	lumpy	Program:.*\(v (.*)\)
+MACS2	MACS2	recipe	macs2 --version	macs2 (.*)
 mummer	mummer	none	dpkg -s mummer	Version: (.*)
+mutatrix	mutatrix	recipe	cd /usr/local/bioinf-recipes/mutatrix/ && git rev-parse HEAD	(.*)
 ncbi-blast+	ncbi-blast+	apt-get	dpkg -s ncbi-blast+	Version: (.*)
 pagit	pagit	recipe	cat /usr/local/bioinf-recipes/pagit-install/README.txt	tar czvf PAGIT.(.*).64bit.tgz
+PBcR	PBcR	recipe	ls -lh $(which PBcR)	.*/wgs-(.*)/Linux.*
+phantomPeakQualTools	phantomPeakQualTools	recipe	ls -lh $(which run_spp.R)	.* -> .*/phantompeakqualtools-([\d.]+)\/.*
 prokka	prokka	recipe	prokka --version	prokka (.*)
+python	python	none	python --version	Python (.*)
+python3	python3	none	python3 --version	Python (.*)
 reapr	reapr	recipe	reapr	REAPR version: (.*)
+sambamba	sambamba	recipe	sambamba	sambamba v(.*)
+samblaster	samblaster	recipe	samblaster -h	samblaster: Version (.*)
 samtools	samtools	none	samtools	Version: (.*)
+samtools-1	samtools-1	recipe	samtools-1	Version: (.*) \(using.*
 seaview	seaview	none	dpkg -s seaview	Version: (.*)
+seqtk	seqtk	apt-get	seqtk	Version: (.*)
 smalt	smalt	recipe	smalt version	Version: (.*)
 spades	spades	recipe	spades.py	SPAdes genome assembler (v.*)
+svtyper	svtyper	recipe	svtyper -h	version: \$Revision: (.*) \$
 tabix	tabix	apt-get	tabix	Version: (.*)
 tophat2	tophat	none	tophat2 --version	TopHat v(.*)
+ucsc_tools	ucsc_tools	recipe	ls -lh $(which addCols)	.* -> .*/userApps-(\d+)\/.*
+vcflib	vcflib	recipe	cd /usr/local/bioinf-recipes/vcflib && git status	HEAD detached at v(.*)
 velvet	velvet	recipe	velveth	Version (.*)
+vt	vt	recipe	ls -lh $(which vt)	.* -> .*/vt-(.*)/vt

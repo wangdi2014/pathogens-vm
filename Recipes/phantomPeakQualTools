@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+set -e
+
+version=1.1
+d=/usr/local/bioinf-recipes/phantomPeakQualTools
+mkdir $d
+cd $d
+wget https://phantompeakqualtools.googlecode.com/files/ccQualityControl.v.$version.tar.gz
+tar -zxf ccQualityControl.v.$version.tar.gz 
+rm ccQualityControl.v.$version.tar.gz
+mv phantompeakqualtools/ phantompeakqualtools-$version
+cd phantompeakqualtools-$version/
+spp=$(ls spp_*.tar.gz)
+R CMD INSTALL $spp
+
+# Add hashbang to scripts and make executable
+for x in  run_spp.R run_spp_nodups.R
+do
+    awk 'BEGIN{print "#!/usr/bin/env Rscript"} {print}' $x > tmp.$$.R
+    mv tmp.$$.R $x
+    chmod +x $x
+    ln -s $d/phantompeakqualtools-$version/$x /usr/local/bin/$x
+done
