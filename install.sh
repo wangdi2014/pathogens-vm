@@ -37,6 +37,7 @@ python3-numpy \
 python3-setuptools \
 python3-pip \
 prodigal \
+sra-toolkit \
 aragorn \
 libdatetime-perl \
 libmysqlclient-dev \
@@ -128,3 +129,5 @@ chown manager:manager ~/Desktop/artemis.desktop ~/Desktop/act.desktop
 # shared folders belong to the group "vboxsf".
 # Need to add the user manager to this group, so shared folders work
 usermod -a -G vboxsf manager
+
+chown manager:manager ~/.bash_history
