@@ -12,4 +12,4 @@ cd lumpy-sv
 make
 cd /usr/local/bin
 cp -s $d/lumpy-sv/bin/* .
-echo "export PATH=$PATH:$d/lumpy-sv/scripts" >> ~/.bashrc
+echo "export PATH=\$PATH:$d/lumpy-sv/scripts" >> ~/.bashrc
