@@ -37,6 +37,7 @@ python3-numpy \
 python3-setuptools \
 python3-pip \
 prodigal \
+sra-toolkit \
 aragorn \
 libdatetime-perl \
 libmysqlclient-dev \
