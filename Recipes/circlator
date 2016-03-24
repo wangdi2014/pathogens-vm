@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-version=1.1.1
+version=1.2.0
 cd /tmp
 wget https://github.com/sanger-pathogens/circlator/archive/v$version.tar.gz
 tar -zxf v$version.tar.gz
