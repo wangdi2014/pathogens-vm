@@ -29,6 +29,7 @@ continue.
 (the root password is 'manager'):
 
     ```
+    sudo apt-get update
     sudo apt-get install -y git
     git clone https://github.com/sanger-pathogens/pathogens-vm.git
     cd pathogens-vm
