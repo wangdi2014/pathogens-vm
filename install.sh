@@ -5,9 +5,6 @@ set -e
 sed -i 's"/home/manager:/bin/zsh"/home/manager:/bin/bash"' /etc/passwd
 
 
-apt-get update
-apt-get upgrade
-
 mkdir -p /usr/local/bioinf-recipes
 
 # dnaplotter is installed as part of bio-linux-artemis,
