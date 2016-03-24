@@ -30,6 +30,7 @@ continue.
 
     ```
     sudo apt-get update
+    sudo apt-get upgrade
     sudo apt-get install -y git
     git clone https://github.com/sanger-pathogens/pathogens-vm.git
     cd pathogens-vm
