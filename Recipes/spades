@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-version=3.6.0
+version=3.7.1
 d=/usr/local/bioinf-recipes/spades
 mkdir $d
 cd $d
