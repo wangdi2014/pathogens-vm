@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -e
+
+version=2.3.1
+cd /usr/local/bioinf-recipes/
+wget https://github.com/sanger-pathogens/snp-sites/archive/$version.tar.gz
+tar -zxf $version.tar.gz
+rm $version.tar.gz
+cd snp-sites-$version
+autoreconf -i
+./configure
+make
+make check
+make install
