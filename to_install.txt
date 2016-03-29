@@ -35,3 +35,4 @@ velvet
 spades
 circlator
 lumpy-sv
+snp-sites
