@@ -7,7 +7,6 @@ cd gubbins
 autoreconf -i
 ./configure
 make
-make check
 make install
 # fix to find gubbins library. Stops this error:
 # error while loading shared libraries: libgubbins.so.0
