@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+set -e
+
+# Ubuntu 14.04 only has an old version of GCC, so install a newer one
+add-apt-repository -y ppa:ubuntu-toolchain-r/test
+apt-get update
+apt-get -f install
+apt-get install -y g++-4.9 libhdf5-dev libopenblas-dev libboost1.55-dev libboost-program-options1.55-dev
+
+
+cd /usr/local/bioinf-recipes/
+git clone --recursive https://github.com/johnlees/seer
+cd seer
+
+wget http://www.cs.unc.edu/Research/compgeom/gzstream/gzstream.tgz
+tar xzf gzstream.tgz
+cd gzstream && CC=/usr/bin/gcc-4.9 make
+cd ..
+
+wget http://sourceforge.net/projects/arma/files/armadillo-6.700.6.tar.gz
+tar xzf armadillo-6.700.6.tar.gz
+cd armadillo-6.700.6
+CXX=/usr/bin/g++-4.9 cmake .
+make
+make install
+ldconfig /usr/lib64
+cd ..
+cd src && CXX=/usr/bin/g++-4.9 make
+ln -s /usr/local/bioinf-recipes/seer/src/seer /usr/local/bin/seer
+ln -s /usr/local/bioinf-recipes/seer/src/kmds /usr/local/bin/kmds
+ln -s /usr/local/bioinf-recipes/seer/src/map_back /usr/local/bin/map_back 
+ln -s /usr/local/bioinf-recipes/seer/src/combineKmers /usr/local/bin/combineKmers
+ln -s /usr/local/bioinf-recipes/seer/src/filter_seer /usr/local/bin/filter_seer 

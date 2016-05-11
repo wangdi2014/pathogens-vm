@@ -48,7 +48,7 @@ exonerate \
 fasttree \
 tabix \
 virtualbox-guest-dkms \
-zerofree
+zerofree 
 do
     echo
     echo "----------------------- installing $package ... ----------------------"

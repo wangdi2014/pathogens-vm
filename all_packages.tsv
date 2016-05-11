@@ -42,6 +42,7 @@ samblaster	samblaster	recipe	samblaster -h	samblaster: Version (.*)
 samtools	samtools	none	samtools	Version: (.*)
 samtools-1	samtools-1	recipe	samtools-1	Version: (.*) \(using.*
 seaview	seaview	none	dpkg -s seaview	Version: (.*)
+seer	seer	recipe	seer --version	(\d+\.\d+\.\d+)
 seqtk	seqtk	apt-get	seqtk	Version: (.*)
 smalt	smalt	recipe	smalt version	Version: (.*)
 snp-sites	snp-sites	recipe	snp-sites -V	snp-sites (.*)
