@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -e
+
+version=3.2.2
+d=/usr/local/bioinf-recipes/
+cd $d
+wget https://cran.r-project.org/src/base/R-3/R-$version.tar.gz 
+tar -xvf R-$version.tar.gz
+pushd R-$version && ./configure --with-readline=no --with-x --with-cairo && make && sudo make install && popd

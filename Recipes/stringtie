@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -e
+
+version=1.3.0
+d=/usr/local/bioinf-recipes/
+cd $d
+wget http://ccb.jhu.edu/software/stringtie/dl/stringtie-$version.tar.gz
+tar -zxf stringtie-$version.tar.gz
+rm stringtie-$version.tar.gz
+cd stringtie-$version
+make release
+cd /usr/local/bin/
+cp -s  $d/stringtie-$version/* .

@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -e
+
+d=/usr/local/bioinf-recipes/
+cd $d
+version=1.1_2011_02_21
+wget https://sourceforge.net/projects/breakdancer/files/breakdancer-$version.zip/download
+mv download breakdancer-$version.zip
+unzip breakdancer-$version.zip
+
+cd /usr/local/bin/
+cp -s  $d/breakdancer-$version/cpp/breakdancer_max .
+cp -s  $d/breakdancer-$version/perl/bam2cfg.pl .

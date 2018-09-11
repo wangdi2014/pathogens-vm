@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -e
+
+version=2.0.4
+d=/usr/local/bioinf-recipes/
+cd $d
+wget ftp://ftp.ccb.jhu.edu/pub/infphilo/hisat2/downloads/hisat2-$version-source.zip
+unzip hisat2-$version-source.zip
+rm hisat2-$version-source.zip
+cd hisat2-$version
+make 
+cd /usr/local/bin/
+cp -s  $d/hisat2-$version/* .

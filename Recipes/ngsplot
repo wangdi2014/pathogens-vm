@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -e
+
+d=/usr/local/bioinf-recipes/
+cd $d
+version=2.63
+wget https://github.com/shenlab-sinai/ngsplot/archive/$version.tar.gz
+tar -xf $version.tar.gz
+
+cd /usr/local/bin/
+cp -s  $d/ngsplot-$version/bin/* .
+
+echo 'export NGSPLOT=$d/ngsplot-$version' >> ~/.bashrc

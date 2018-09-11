@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -e
+
+# Remove biolinux version of bwa
+apt-get remove -y bwa
+
+version=0.7.15
+d=/usr/local/bioinf-recipes/
+cd $d
+wget https://github.com/lh3/bwa/releases/download/v$version/bwa-$version.tar.bz2
+tar -xf bwa-$version.tar.bz2
+rm bwa-$version.tar.bz2
+cd bwa-$version
+make
+cd /usr/local/bin/
+cp -s  $d/bwa-$version/bwa .
