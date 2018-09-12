@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 set -e
 
+version=1.4.2
 cd /usr/local/bioinf-recipes/
-git clone https://github.com/sanger-pathogens/gubbins.git
-cd gubbins
+wget https://github.com/sanger-pathogens/gubbins/archive/v$version.tar.gz
+tar -xf v$version.tar.gz
+rm v$version.tar.gz
+cd gubbins-$version
 autoreconf -i
 ./configure
 make
@@ -11,4 +14,5 @@ make install
 # fix to find gubbins library. Stops this error:
 # error while loading shared libraries: libgubbins.so.0
 rm /usr/local/bin/gubbins
-ln -s /usr/local/bioinf-recipes/gubbins/src/gubbins /usr/local/bin/gubbins
+ln -s /usr/local/bioinf-recipes/gubbins-$version/src/gubbins /usr/local/bin/gubbins
+

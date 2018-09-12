@@ -19,7 +19,7 @@ fastaq	fastaq	recipe	fastaq version	(\d+\.\d+\.\d+)
 fastml	fastml	recipe	ls -lh $(which fastml)	.* -> .*FastML\.(v.*)/programs.*
 figtree	figtree	apt-get	dpkg -s figtree	Version: (.*)
 freebayes	freebayes	recipe	freebayes	version:  v(.*)
-gubbins	gubbins	recipe	gubbins	Version: (.*)
+gubbins	run_gubbins.py	recipe	run_gubbins.py --version	(.*)
 hisat2	hisat2	recipe	hisat2 --version	.*/hisat2-align-s version (.*)
 htsbox	htsbox	recipe	htsbox	Version: htslib lite-.*, htsbox (.*)
 igv	igv	recipe	ls -lh $(which igv.sh)	.* -> .*igv-(.*)/igv.sh
