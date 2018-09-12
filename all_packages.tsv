@@ -9,6 +9,7 @@ bcftools-1	bcftools-1	recipe	bcftools-1	Version: (.*) \(using.*
 bedtools	bedtools	recipe	bedtools --version	bedtools (.*)
 blast2	blast2	none	dpkg -s blast2	Version: (.*)
 bowtie2	bowtie2	none	bowtie2 --version	.*bowtie2.* version (.*)
+breakdancer	breakdancer_max	recipe	breakdancer_max version	\#Software: BreakDancerMax-(.*)
 bwa	bwa	recipe	bwa	Version: (.*)
 circlator	circlator	recipe	circlator version	(.*)
 clustalx	bio-linux-clustal	none	dpkg -s clustalx	Version: (.*)
@@ -32,6 +33,7 @@ MACS2	MACS2	recipe	macs2 --version	macs2 (.*)
 mummer	mummer	none	dpkg -s mummer	Version: (.*)
 mutatrix	mutatrix	recipe	cd /usr/local/bioinf-recipes/mutatrix/ && git rev-parse HEAD	(.*)
 ncbi-blast+	ncbi-blast+	apt-get	dpkg -s ncbi-blast+	Version: (.*)
+ngsplot	ngsplotdb.py	recipe	ngsplotdb.py	(.*)
 pagit	pagit	recipe	cat /usr/local/bioinf-recipes/pagit-install/README.txt	tar czvf PAGIT.(.*).64bit.tgz
 PBcR	PBcR	recipe	ls -lh $(which PBcR)	.*/wgs-(.*)/Linux.*
 phantomPeakQualTools	phantomPeakQualTools	recipe	ls -lh $(which run_spp.R)	.* -> .*/phantompeakqualtools-([\d.]+)\/.*

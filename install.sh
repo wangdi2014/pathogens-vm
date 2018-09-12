@@ -90,8 +90,8 @@ pip3 install jupyter
 pip3 install bash_kernel
 python3 -m bash_kernel.install
 # Need this, otherwise jupyter only works as root
-chown manager:manager -R ~/.local/share/jupyter/
-chown manager:manager -R ~/.ipython/
+#chown manager:manager -R ~/.local/share/jupyter/
+#chown manager:manager -R ~/.ipython/
 
 echo "--------------------- installed Python pip etc ... ------------------------"
 
