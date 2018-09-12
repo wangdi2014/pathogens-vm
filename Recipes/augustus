@@ -5,17 +5,15 @@ set -e
 d=/usr/local/bioinf-recipes/augustus
 mkdir $d
 cd $d
-wget http://bioinf.uni-greifswald.de/augustus/binaries/augustus.current.tar.gz
-tar -zxf augustus.current.tar.gz
-version=$(ls | awk -F"-" '!/current/ {print $2}')
+version=3.2.1
+wget http://bioinf.uni-greifswald.de/augustus/binaries/old/augustus-$version.tar.gz
+tar -zxf augustus-$version.tar.gz
 cd augustus-$version/
 make
 make install
 chmod -R +rx /opt/augustus-$version/
 
 # add 3D7 data
-/usr/local/bioinf-recipes/augustus/augustus-3.2.1/config/
-
 
 mkdir /usr/local/bioinf-recipes/augustus/augustus-$version/config/species/3D7
 echo "AUGUSTUS_CONFIG_PATH=/usr/local/bioinf-recipes/augustus/augustus-$version/config" >> /etc/environment
