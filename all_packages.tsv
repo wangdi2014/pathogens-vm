@@ -38,7 +38,7 @@ phantomPeakQualTools	phantomPeakQualTools	recipe	ls -lh $(which run_spp.R)	.* ->
 prokka	prokka	recipe	prokka --version	prokka (.*)
 python	python	none	python --version	Python (.*)
 python3	python3	none	python3 --version	Python (.*)
-R	R	recipe	R --version		R version (.*)
+R	R	recipe	R --version	R version (.*)
 reapr	reapr	recipe	reapr	REAPR version: (.*)
 sambamba	sambamba	recipe	sambamba	sambamba v(.*)
 samblaster	samblaster	recipe	samblaster -h	samblaster: Version (.*)

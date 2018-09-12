@@ -102,10 +102,6 @@ echo "-------------- installing bioinf packages -------------------"
 chown manager:manager $HOME/Desktop/README.txt
 
 echo "--------------------- installing R packages ... ------------------------"
-Rscript -e "install.packages(c('httpuv', 'mime', 'jsonlite', 'htmltools', 'R6', 'sourcetools', 'xtable', 'ggplot2', 'dplyr', 'data.table', 'tidyr', 'reshape2', 'lazyeval', 'RcppArmadillo', 'Hmisc', '\
-XML'), repos='http://www.stats.bris.ac.uk/R/')"
-Rscript -e "source('http://bioconductor.org/biocLite.R')" -e "biocLite(c('rhdf5', 'S4Vectors', 'IRanges', 'GenomicRanges', 'Biobase', 'BiocParallel', 'genefilter', 'geneplotter'))"
-
 cwd=$(pwd)
 cd /usr/local/bioinf-recipes/
 #shiny

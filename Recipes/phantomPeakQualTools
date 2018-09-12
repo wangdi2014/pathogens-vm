@@ -5,7 +5,7 @@ version=1.1
 d=/usr/local/bioinf-recipes/phantomPeakQualTools
 mkdir $d
 cd $d
-wget https://phantompeakqualtools.googlecode.com/files/ccQualityControl.v.$version.tar.gz
+wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/phantompeakqualtools/ccQualityControl.v.$version.tar.gz
 tar -zxf ccQualityControl.v.$version.tar.gz 
 rm ccQualityControl.v.$version.tar.gz
 mv phantompeakqualtools/ phantompeakqualtools-$version
