@@ -1,9 +1,12 @@
+R
 abacas
 assembly-stats
 augustus
 barrnap
 bcftools-1
 bedtools
+breakdancer
+bwa
 fastaq
 figtree
 fastml
@@ -12,9 +15,11 @@ gubbins
 htsbox
 igv
 icorn2
+kallisto
 kmc
 MACS2
 mutatrix
+ngsplot
 PBcR
 phantomPeakQualTools
 sambamba
@@ -37,3 +42,6 @@ circlator
 lumpy-sv
 snp-sites
 seer
+stringtie
+hisat2
+

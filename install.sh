@@ -22,10 +22,13 @@ libbamtools-dev \
 check \
 cpanminus \
 flashplugin-installer \
+gdebi \
 libboost-iostreams-dev \
 libboost-system-dev \
 libboost-filesystem-dev \
+libhdf5-dev \
 libtool \
+libxml2-dev \
 pandoc \
 python-numpy \
 python-setuptools \
@@ -41,7 +44,6 @@ libmysqlclient-dev \
 libssl-dev \
 libxml-simple-perl \
 parallel \
-fasttree \
 prank \
 mafft \
 exonerate \
@@ -83,12 +85,13 @@ echo "--------------------- installing Python pip etc ... ----------------------
 easy_install pip
 pip install pysam==0.8.3
 pip3 install pysam==0.8.3
+pip3 install --upgrade setuptools
 pip3 install jupyter
 pip3 install bash_kernel
 python3 -m bash_kernel.install
 # Need this, otherwise jupyter only works as root
-chown manager:manager -R ~/.local/share/jupyter/
-chown manager:manager -R ~/.ipython/
+#chown manager:manager -R ~/.local/share/jupyter/
+#chown manager:manager -R ~/.ipython/
 
 echo "--------------------- installed Python pip etc ... ------------------------"
 
@@ -98,6 +101,35 @@ echo "-------------- installing bioinf packages -------------------"
 ./install_bioinf_packages.pl all_packages.tsv to_install.txt
 chown manager:manager $HOME/Desktop/README.txt
 
+echo "--------------------- installing R packages ... ------------------------"
+cwd=$(pwd)
+cd /usr/local/bioinf-recipes/
+#shiny
+git clone --branch v0.14 https://github.com/rstudio/shiny.git
+pushd shiny && git archive --format=tar.gz --prefix=shiny-0.14/ v0.14 >shiny-0.14.tar.gz && popd
+pushd shiny && Rscript -e "install.packages('shiny-0.14.tar.gz', repos = NULL, type='source')" && popd
+
+#shiny-server
+wget https://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.4.6.809-amd64.deb
+gdebi -n shiny-server-1.4.6.809-amd64.deb
+
+#edgeR
+wget https://bioconductor.riken.jp/packages/3.1/bioc/src/contrib/edgeR_3.10.5.tar.gz
+Rscript -e "install.packages('edgeR_3.10.5.tar.gz', repos = NULL, type='source')"
+
+#sleuth
+wget https://github.com/pachterlab/sleuth/archive/v0.28.1.tar.gz
+mv v0.28.1.tar.gz sleuth-v0.28.1.tar.gz
+Rscript -e "install.packages('sleuth-v0.28.1.tar.gz', repos = NULL, type='source')"
+
+#DESeq2
+wget https://cran.r-project.org/src/contrib/00Archive/RcppArmadillo/RcppArmadillo_0.4.200.0.tar.gz
+Rscript -e "install.packages('RcppArmadillo_0.4.200.0.tar.gz', repos = NULL, type='source')"
+wget http://bioconductor.org/packages/3.1/bioc/src/contrib/DESeq2_1.8.2.tar.gz
+Rscript -e "install.packages('DESeq2_1.8.2.tar.gz', repos = NULL, type='source')"
+
+cd $cwd
+echo "--------------------- installed R packages ... ------------------------"
 
 echo "-------------- adding desktop shortcuts ---------------------"
 echo "[Desktop Entry]
