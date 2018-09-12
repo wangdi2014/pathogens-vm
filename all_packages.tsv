@@ -20,12 +20,12 @@ fastml	fastml	recipe	ls -lh $(which fastml)	.* -> .*FastML\.(v.*)/programs.*
 figtree	figtree	apt-get	dpkg -s figtree	Version: (.*)
 freebayes	freebayes	recipe	freebayes	version:  v(.*)
 gubbins	gubbins	recipe	gubbins	Version: (.*)
-hisat2	hisat2	recipe	hisat2 --version .*/hisat2-align-s version (.*)
+hisat2	hisat2	recipe	hisat2 --version	.*/hisat2-align-s version (.*)
 htsbox	htsbox	recipe	htsbox	Version: htslib lite-.*, htsbox (.*)
 igv	igv	recipe	ls -lh $(which igv.sh)	.* -> .*igv-(.*)/igv.sh
 icorn2	icorn2	recipe	ls -lh $(which icorn2.sh)	.*/ICORN2-([0-9.]+)/.*
 iva	iva	recipe	iva --version	(.*)
-kallisto	kallisto    recipe	kallisto	kallisto (.*)
+kallisto	kallisto	recipe	kallisto	kallisto (.*)
 kmc	kmc	recipe	kmc	K-Mer Counter \(KMC\) ver. (.*) \(.*\)
 lumpy-sv	lumpy-sv	recipe	lumpy	Program:.*\(v (.*)\)
 MACS2	MACS2	recipe	macs2 --version	macs2 (.*)
