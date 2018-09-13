@@ -44,4 +44,5 @@ snp-sites
 seer
 stringtie
 hisat2
-
+ngmlr
+sniffles
