@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -e
+
+version=1.0.6
+d=/usr/local/bioinf-recipes/
+cd $d
+wget https://github.com/fritzsedlazeck/Sniffles/archive/v$version.tar.gz
+tar xf v$version.tar.gz
+rm v$version.tar.gz
+cd Sniffles-$version
+mkdir -p build/
+cd build/
+cmake ..
+make
+
+cd /usr/local/bin/
+cp -s  $d/Sniffles-$version/bin/sniffles*/sniffles .

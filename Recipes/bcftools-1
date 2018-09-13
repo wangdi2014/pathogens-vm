@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-version=1.3
+version=1.5
 cd /usr/local/bioinf-recipes/
 wget https://github.com/samtools/bcftools/releases/download/$version/bcftools-$version.tar.bz2
 tar -xjf bcftools-$version.tar.bz2

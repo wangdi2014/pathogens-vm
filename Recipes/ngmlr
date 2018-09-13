@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -e
+
+version=0.2.6
+d=/usr/local/bioinf-recipes/
+cd $d
+wget https://github.com/philres/ngmlr/releases/download/v$version/ngmlr-$version-beta-linux-x86_64.tar.gz
+tar xf ngmlr-$version-beta-linux-x86_64.tar.gz
+rm ngmlr-$version-beta-linux-x86_64.tar.gz
+
+cd /usr/local/bin/
+cp -s  $d/ngmlr-$version/ngmlr .
