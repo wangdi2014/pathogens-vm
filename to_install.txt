@@ -46,3 +46,4 @@ stringtie
 hisat2
 ngmlr
 sniffles
+exonerate

@@ -15,6 +15,7 @@ circlator	circlator	recipe	circlator version	(.*)
 clustalx	bio-linux-clustal	none	dpkg -s clustalx	Version: (.*)
 cufflinks	cufflinks	none	cufflinks	cufflinks v(.*)
 emboss	emboss	apt-get	dpkg -s emboss	Version: (.*)
+exonerate	exonerate	recipe	exonerate --version	exonerate from exonerate version (.*)
 fasta	bio-linux-fasta	none	dpkg -s bio-linux-fasta	Version: (.*)
 fastaq	fastaq	recipe	fastaq version	(\d+\.\d+\.\d+)
 fastml	fastml	recipe	ls -lh $(which fastml)	.* -> .*FastML\.(v.*)/programs.*
