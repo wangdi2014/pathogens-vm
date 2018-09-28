@@ -47,4 +47,5 @@ hisat2
 ngmlr
 sniffles
 exonerate
+miniasm
 minimap2
