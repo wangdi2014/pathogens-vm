@@ -11,6 +11,7 @@ blast2	blast2	none	dpkg -s blast2	Version: (.*)
 bowtie2	bowtie2	none	bowtie2 --version	.*bowtie2.* version (.*)
 breakdancer	breakdancer_max	recipe	breakdancer_max version	\#Software: BreakDancerMax-(.*)
 bwa	bwa	recipe	bwa	Version: (.*)
+canu	canu	recipe	canu --version	Canu (.*)
 circlator	circlator	recipe	circlator version	(.*)
 clustalx	bio-linux-clustal	none	dpkg -s clustalx	Version: (.*)
 cufflinks	cufflinks	none	cufflinks	cufflinks v(.*)
@@ -40,7 +41,6 @@ ncbi-blast+	ncbi-blast+	apt-get	dpkg -s ncbi-blast+	Version: (.*)
 ngmlr	ngmlr	recipe	ngmlr	ngmlr (.*)
 ngsplot	ngsplotdb.py	recipe	ngsplotdb.py	(.*)
 pagit	pagit	recipe	cat /usr/local/bioinf-recipes/pagit-install/README.txt	tar czvf PAGIT.(.*).64bit.tgz
-PBcR	PBcR	recipe	ls -lh $(which PBcR)	.*/wgs-(.*)/Linux.*
 phantomPeakQualTools	phantomPeakQualTools	recipe	ls -lh $(which run_spp.R)	.* -> .*/phantompeakqualtools-([\d.]+)\/.*
 prokka	prokka	recipe	prokka --version	prokka (.*)
 python	python	none	python --version	Python (.*)
