@@ -1,0 +1,11 @@
+set -e
+
+d=/usr/local/bioinf-recipes/
+cd $d
+version=2.0
+wget https://github.com/ruanjue/wtdbg2/releases/download/$version/wtdbg-$version\_x64-linux.tar.bz2
+tar xf wtdbg-$version\_x64-linux.tar.bz2
+rm wtdbg-$version\_x64-linux.tar.bz2
+
+cd /usr/local/bin/
+cp -s $d/wtdbg-2.0_x64-linux/* .

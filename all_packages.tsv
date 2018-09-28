@@ -66,3 +66,4 @@ ucsc_tools	ucsc_tools	recipe	ls -lh $(which addCols)	.* -> .*/userApps-(\d+)\/.*
 vcflib	vcflib	recipe	cd /usr/local/bioinf-recipes/vcflib && git status	HEAD detached at v(.*)
 velvet	velvet	recipe	velveth	Version (.*)
 vt	vt	recipe	ls -lh $(which vt)	.* -> .*/vt-(.*)/vt
+wtdbg2	wtdbg2	recipe	wtdbg2	Version: (.*)
