@@ -1,0 +1,11 @@
+set -e
+
+d=/usr/local/bioinf-recipes/
+cd $d
+version=2.12
+wget https://github.com/lh3/minimap2/releases/download/v$version/minimap2-$version\_x64-linux.tar.bz2
+tar xf minimap2-$version\_x64-linux.tar.bz2
+rm minimap2-$version\_x64-linux.tar.bz2
+
+cd /usr/local/bin/
+cp -s $d/minimap2-$version\_x64-linux/minimap2 minimap2

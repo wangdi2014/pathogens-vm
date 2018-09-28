@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -e
+
+d=/usr/local/bioinf-recipes/
+cd $d
+version=2.2.0
+wget http://ftp.ebi.ac.uk/pub/software/vertebrategenomics/exonerate/exonerate-$version-x86_64.tar.gz
+
+tar -xf exonerate-$version-x86_64.tar.gz
+rm exonerate-$version-x86_64.tar.gz
+
+cd /usr/local/bin/
+cp -s  $d/exonerate-$version-x86_64/bin/* .

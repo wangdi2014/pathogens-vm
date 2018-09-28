@@ -20,7 +20,6 @@ kmc
 MACS2
 mutatrix
 ngsplot
-PBcR
 phantomPeakQualTools
 sambamba
 samblaster
@@ -46,3 +45,9 @@ stringtie
 hisat2
 ngmlr
 sniffles
+exonerate
+miniasm
+minimap2
+wtdbg2
+jellyfish
+canu

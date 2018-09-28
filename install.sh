@@ -86,6 +86,7 @@ easy_install pip
 pip install pysam==0.8.3
 pip3 install pysam==0.8.3
 pip3 install --upgrade setuptools
+pip3 install ipython==6.5.0
 pip3 install jupyter
 pip3 install bash_kernel
 python3 -m bash_kernel.install

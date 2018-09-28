@@ -1,0 +1,15 @@
+set -e
+
+d=/usr/local/bioinf-recipes/
+cd $d
+version=0.3
+wget https://github.com/lh3/miniasm/archive/v$version.tar.gz
+tar xf v$version.tar.gz
+rm v$version.tar.gz
+
+cd miniasm-$version
+make 
+
+cd /usr/local/bin/
+cp -s $d/miniasm-$version/miniasm .
+cp -s $d/miniasm-$version/minidot .

@@ -11,10 +11,12 @@ blast2	blast2	none	dpkg -s blast2	Version: (.*)
 bowtie2	bowtie2	none	bowtie2 --version	.*bowtie2.* version (.*)
 breakdancer	breakdancer_max	recipe	breakdancer_max version	\#Software: BreakDancerMax-(.*)
 bwa	bwa	recipe	bwa	Version: (.*)
+canu	canu	recipe	canu --version	Canu (.*)
 circlator	circlator	recipe	circlator version	(.*)
 clustalx	bio-linux-clustal	none	dpkg -s clustalx	Version: (.*)
 cufflinks	cufflinks	none	cufflinks	cufflinks v(.*)
 emboss	emboss	apt-get	dpkg -s emboss	Version: (.*)
+exonerate	exonerate	recipe	exonerate --version	exonerate from exonerate version (.*)
 fasta	bio-linux-fasta	none	dpkg -s bio-linux-fasta	Version: (.*)
 fastaq	fastaq	recipe	fastaq version	(\d+\.\d+\.\d+)
 fastml	fastml	recipe	ls -lh $(which fastml)	.* -> .*FastML\.(v.*)/programs.*
@@ -26,17 +28,19 @@ htsbox	htsbox	recipe	htsbox	Version: htslib lite-.*, htsbox (.*)
 igv	igv	recipe	ls -lh $(which igv.sh)	.* -> .*igv-(.*)/igv.sh
 icorn2	icorn2	recipe	ls -lh $(which icorn2.sh)	.*/ICORN2-([0-9.]+)/.*
 iva	iva	recipe	iva --version	(.*)
+jellyfish	jellyfish	recipe	jellyfish --version	jellyfish (.*)
 kallisto	kallisto	recipe	kallisto	kallisto (.*)
 kmc	kmc	recipe	kmc	K-Mer Counter \(KMC\) ver. (.*) \(.*\)
 lumpy-sv	lumpy-sv	recipe	lumpy	Program:.*\(v (.*)\)
 MACS2	MACS2	recipe	macs2 --version	macs2 (.*)
+miniasm	miniasm	recipe	miniasm -V	(.*)
+minimap2	minimap2	recipe	minimap2 --version	(.*)
 mummer	mummer	none	dpkg -s mummer	Version: (.*)
 mutatrix	mutatrix	recipe	cd /usr/local/bioinf-recipes/mutatrix/ && git rev-parse HEAD	(.*)
 ncbi-blast+	ncbi-blast+	apt-get	dpkg -s ncbi-blast+	Version: (.*)
 ngmlr	ngmlr	recipe	ngmlr	ngmlr (.*)
 ngsplot	ngsplotdb.py	recipe	ngsplotdb.py	(.*)
 pagit	pagit	recipe	cat /usr/local/bioinf-recipes/pagit-install/README.txt	tar czvf PAGIT.(.*).64bit.tgz
-PBcR	PBcR	recipe	ls -lh $(which PBcR)	.*/wgs-(.*)/Linux.*
 phantomPeakQualTools	phantomPeakQualTools	recipe	ls -lh $(which run_spp.R)	.* -> .*/phantompeakqualtools-([\d.]+)\/.*
 prokka	prokka	recipe	prokka --version	prokka (.*)
 python	python	none	python --version	Python (.*)
@@ -63,3 +67,4 @@ ucsc_tools	ucsc_tools	recipe	ls -lh $(which addCols)	.* -> .*/userApps-(\d+)\/.*
 vcflib	vcflib	recipe	cd /usr/local/bioinf-recipes/vcflib && git status	HEAD detached at v(.*)
 velvet	velvet	recipe	velveth	Version (.*)
 vt	vt	recipe	ls -lh $(which vt)	.* -> .*/vt-(.*)/vt
+wtdbg2	wtdbg2	recipe	wtdbg2	Version: (.*)
