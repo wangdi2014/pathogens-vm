@@ -8,5 +8,4 @@ wget https://github.com/gmarcais/Jellyfish/releases/download/v$version/jellyfish
 chmod +x jellyfish-linux
 
 cd /usr/local/bin/
-rm jellyfish
 cp -s $d/jellyfish/jellyfish-linux jellyfish
