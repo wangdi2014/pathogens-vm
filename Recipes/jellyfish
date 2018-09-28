@@ -1,0 +1,12 @@
+set -e
+
+d=/usr/local/bioinf-recipes/
+cd $d
+mkdir jellyfish && cd jellyfish
+version=2.2.10
+wget https://github.com/gmarcais/Jellyfish/releases/download/v$version/jellyfish-linux
+chmod +x jellyfish-linux
+
+cd /usr/local/bin/
+rm jellyfish
+cp -s $d/jellyfish/jellyfish-linux jellyfish

@@ -50,3 +50,4 @@ exonerate
 miniasm
 minimap2
 wtdbg2
+jellyfish
