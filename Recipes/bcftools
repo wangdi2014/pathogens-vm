@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
+# Remove old version
+rm /usr/bin/bcftools
+
 version=1.6
 cd /usr/local/bioinf-recipes/
 wget https://github.com/samtools/bcftools/releases/download/$version/bcftools-$version.tar.bz2
@@ -9,4 +12,4 @@ rm bcftools-$version.tar.bz2
 cd bcftools-$version
 make
 ln -s /usr/local/bioinf-recipes/bcftools-$version/bcftools /usr/local/bin/bcftools-$version
-ln -s /usr/local/bioinf-recipes/bcftools-$version/bcftools /usr/local/bin/bcftools-1
+ln -s /usr/local/bioinf-recipes/bcftools-$version/bcftools /usr/local/bin/bcftools

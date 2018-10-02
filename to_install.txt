@@ -3,7 +3,7 @@ abacas
 assembly-stats
 augustus
 barrnap
-bcftools-1
+bcftools
 bedtools
 breakdancer
 bwa
