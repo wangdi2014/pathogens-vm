@@ -26,6 +26,7 @@ gdebi \
 libboost-iostreams-dev \
 libboost-system-dev \
 libboost-filesystem-dev \
+libcairo2-dev \
 libhdf5-dev \
 libtool \
 libxml2-dev \
@@ -49,7 +50,12 @@ mafft \
 exonerate \
 fasttree \
 tabix \
+t1-xfree86-nonfree \
+ttf-xfree86-nonfree \
+ttf-xfree86-nonfree-syriac \
 virtualbox-guest-dkms \
+xfonts-100dpi \
+xfonts-75dpi \
 zerofree 
 do
     echo
@@ -119,9 +125,9 @@ wget https://bioconductor.riken.jp/packages/3.1/bioc/src/contrib/edgeR_3.10.5.ta
 Rscript -e "install.packages('edgeR_3.10.5.tar.gz', repos = NULL, type='source')"
 
 #sleuth
-wget https://github.com/pachterlab/sleuth/archive/v0.28.1.tar.gz
-mv v0.28.1.tar.gz sleuth-v0.28.1.tar.gz
-Rscript -e "install.packages('sleuth-v0.28.1.tar.gz', repos = NULL, type='source')"
+wget https://github.com/pachterlab/sleuth/archive/v0.30.0.tar.gz
+mv v0.30.0.tar.gz sleuth-v0.30.0.tar.gz
+Rscript -e "install.packages('sleuth-v0.30.0.tar.gz', repos = NULL, type='source')"
 
 #DESeq2
 wget https://cran.r-project.org/src/contrib/00Archive/RcppArmadillo/RcppArmadillo_0.4.200.0.tar.gz

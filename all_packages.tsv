@@ -49,8 +49,7 @@ R	R	recipe	R --version	R version (.*)
 reapr	reapr	recipe	reapr	REAPR version: (.*)
 sambamba	sambamba	recipe	sambamba	sambamba v(.*)
 samblaster	samblaster	recipe	samblaster -h	samblaster: Version (.*)
-samtools	samtools	none	samtools	Version: (.*)
-samtools-1	samtools-1	recipe	samtools-1	Version: (.*) \(using.*
+samtools	samtools	recipe	samtools	Version: (.*) \(using.*
 seaview	seaview	none	dpkg -s seaview	Version: (.*)
 seer	seer	recipe	seer --version	(\d+\.\d+\.\d+)
 seqtk	seqtk	apt-get	seqtk	Version: (.*)
