@@ -4,8 +4,7 @@ artemis	bio-linux-artemis	none	dpkg -s bio-linux-artemis	Version: (.*)
 assembly-stats	assembly-stats	recipe	assembly-stats -v	Version: (.*)
 augustus	augustus	recipe	augustus --version	AUGUSTUS \((.*)\) is a gene.*
 barrnap	barrnap	recipe	barrnap --version	barrnap (.*)
-bcftools	bcftools	none	bcftools	Version: (.*)
-bcftools-1	bcftools-1	recipe	bcftools-1	Version: (.*) \(using.*
+bcftools	bcftools	recipe	bcftools	Version: (.*) \(using.*
 bedtools	bedtools	recipe	bedtools --version	bedtools (.*)
 blast2	blast2	none	dpkg -s blast2	Version: (.*)
 bowtie2	bowtie2	none	bowtie2 --version	.*bowtie2.* version (.*)
@@ -49,8 +48,7 @@ R	R	recipe	R --version	R version (.*)
 reapr	reapr	recipe	reapr	REAPR version: (.*)
 sambamba	sambamba	recipe	sambamba	sambamba v(.*)
 samblaster	samblaster	recipe	samblaster -h	samblaster: Version (.*)
-samtools	samtools	none	samtools	Version: (.*)
-samtools-1	samtools-1	recipe	samtools-1	Version: (.*) \(using.*
+samtools	samtools	recipe	samtools	Version: (.*) \(using.*
 seaview	seaview	none	dpkg -s seaview	Version: (.*)
 seer	seer	recipe	seer --version	(\d+\.\d+\.\d+)
 seqtk	seqtk	apt-get	seqtk	Version: (.*)

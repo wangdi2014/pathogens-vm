@@ -3,7 +3,7 @@ abacas
 assembly-stats
 augustus
 barrnap
-bcftools-1
+bcftools
 bedtools
 breakdancer
 bwa
@@ -32,7 +32,7 @@ iva
 pagit
 prokka
 reapr
-samtools-1
+samtools
 svtyper
 tabix
 velvet
