@@ -111,6 +111,12 @@ chown manager:manager $HOME/Desktop/README.txt
 echo "--------------------- installing R packages ... ------------------------"
 cwd=$(pwd)
 cd /usr/local/bioinf-recipes/
+
+#devtools
+wget https://cran.r-project.org/src/contrib/devtools_1.13.6.tar.gz
+Rscript -e "install.packages('devtools_1.13.6.tar.gz', repos = NULL, type='source')"
+Rscript -e "install.packages(c('httr', 'whisker', 'git2r'), repos='https://www.stats.bris.ac.uk/R/')"
+
 #shiny
 git clone --branch v0.14 https://github.com/rstudio/shiny.git
 pushd shiny && git archive --format=tar.gz --prefix=shiny-0.14/ v0.14 >shiny-0.14.tar.gz && popd
