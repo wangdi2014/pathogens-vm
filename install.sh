@@ -14,6 +14,9 @@ mv tmp /usr/local/bioinf/artemis/artemis/dnaplotter
 ln -s -f /usr/local/bioinf/artemis/artemis/dnaplotter /usr/local/bin
 chmod 755 /usr/local/bioinf/artemis/artemis/dnaplotter
 
+# add java repository
+add-apt-repository ppa:webupd8team/java
+apt-get update
 
 # install core modules
 for package in \
@@ -30,6 +33,7 @@ libcairo2-dev \
 libhdf5-dev \
 libtool \
 libxml2-dev \
+oracle-java8-installer \
 pandoc \
 python-numpy \
 python-setuptools \
