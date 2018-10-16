@@ -145,6 +145,13 @@ Rscript -e "install.packages('RcppArmadillo_0.4.200.0.tar.gz', repos = NULL, typ
 wget http://bioconductor.org/packages/3.1/bioc/src/contrib/DESeq2_1.8.2.tar.gz
 Rscript -e "install.packages('DESeq2_1.8.2.tar.gz', repos = NULL, type='source')"
 
+#GenomeScope
+wget https://github.com/schatzlab/genomescope/archive/v1.0.0.tar.gz
+tar xf v1.0.0.tar.gz
+rm v1.0.0.tar.gz
+cd /usr/local/bin
+ln -s /usr/local/bioinf-recipes/genomescope-1.0.0/genomescope.R genomescope.R
+
 cd $cwd
 echo "--------------------- installed R packages ... ------------------------"
 
