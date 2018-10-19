@@ -99,6 +99,7 @@ pip3 install --upgrade setuptools
 pip3 install ipython==6.5.0
 pip3 install jupyter
 pip3 install bash_kernel
+pip3 install prompt-toolkit==1.0.15
 python3 -m bash_kernel.install
 # Need this, otherwise jupyter only works as root
 #chown manager:manager -R ~/.local/share/jupyter/
