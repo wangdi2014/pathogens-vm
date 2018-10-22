@@ -14,6 +14,9 @@ mv tmp /usr/local/bioinf/artemis/artemis/dnaplotter
 ln -s -f /usr/local/bioinf/artemis/artemis/dnaplotter /usr/local/bin
 chmod 755 /usr/local/bioinf/artemis/artemis/dnaplotter
 
+# add java repository
+add-apt-repository ppa:webupd8team/java
+apt-get update
 
 # install core modules
 for package in \
@@ -30,6 +33,7 @@ libcairo2-dev \
 libhdf5-dev \
 libtool \
 libxml2-dev \
+oracle-java8-installer \
 pandoc \
 python-numpy \
 python-setuptools \
@@ -95,6 +99,7 @@ pip3 install --upgrade setuptools
 pip3 install ipython==6.5.0
 pip3 install jupyter
 pip3 install bash_kernel
+pip3 install prompt-toolkit==1.0.15
 python3 -m bash_kernel.install
 # Need this, otherwise jupyter only works as root
 #chown manager:manager -R ~/.local/share/jupyter/
@@ -111,6 +116,12 @@ chown manager:manager $HOME/Desktop/README.txt
 echo "--------------------- installing R packages ... ------------------------"
 cwd=$(pwd)
 cd /usr/local/bioinf-recipes/
+
+#devtools
+wget https://cran.r-project.org/src/contrib/devtools_1.13.6.tar.gz
+Rscript -e "install.packages('devtools_1.13.6.tar.gz', repos = NULL, type='source')"
+Rscript -e "install.packages(c('httr', 'whisker', 'git2r'), repos='https://www.stats.bris.ac.uk/R/')"
+
 #shiny
 git clone --branch v0.14 https://github.com/rstudio/shiny.git
 pushd shiny && git archive --format=tar.gz --prefix=shiny-0.14/ v0.14 >shiny-0.14.tar.gz && popd
@@ -134,6 +145,13 @@ wget https://cran.r-project.org/src/contrib/00Archive/RcppArmadillo/RcppArmadill
 Rscript -e "install.packages('RcppArmadillo_0.4.200.0.tar.gz', repos = NULL, type='source')"
 wget http://bioconductor.org/packages/3.1/bioc/src/contrib/DESeq2_1.8.2.tar.gz
 Rscript -e "install.packages('DESeq2_1.8.2.tar.gz', repos = NULL, type='source')"
+
+#GenomeScope
+wget https://github.com/schatzlab/genomescope/archive/v1.0.0.tar.gz
+tar xf v1.0.0.tar.gz
+rm v1.0.0.tar.gz
+cd /usr/local/bin
+ln -s /usr/local/bioinf-recipes/genomescope-1.0.0/genomescope.R genomescope.R
 
 cd $cwd
 echo "--------------------- installed R packages ... ------------------------"

@@ -7,7 +7,10 @@ version=1.1_2011_02_21
 wget https://sourceforge.net/projects/breakdancer/files/breakdancer-$version.zip/download
 mv download breakdancer-$version.zip
 unzip breakdancer-$version.zip
+#Need to change the environment or it won't run
+sed -i 's/#!\/gsc\/bin\/perl/#!\/usr\/bin\/env perl/' /usr/local/bioinf-recipes/breakdancer-1.1_2011_02_21/perl/bam2cfg.pl
+sed -i 's/#!\/gsc\/bin\/perl/#!\/usr\/bin\/env perl/' /usr/local/bioinf-recipes/breakdancer-1.1_2011_02_21/perl/*.pm
 
 cd /usr/local/bin/
 cp -s  $d/breakdancer-$version/cpp/breakdancer_max .
-cp -s  $d/breakdancer-$version/perl/bam2cfg.pl .
+cp -s  $d/breakdancer-$version/perl/* .
