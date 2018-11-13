@@ -13,4 +13,4 @@ cd bcftools-$version
 make
 ln -s /usr/local/bioinf-recipes/bcftools-$version/bcftools /usr/local/bin/bcftools-$version
 ln -s /usr/local/bioinf-recipes/bcftools-$version/bcftools /usr/local/bin/bcftools
-echo "export BCFTOOLS_PLUGINS=/usr/local/bioinf-recipes/bcftools-$version/bcftools/plugins" >> ~/.bashrc
+echo "export BCFTOOLS_PLUGINS=/usr/local/bioinf-recipes/bcftools-$version/plugins" >> ~/.bashrc
