@@ -10,4 +10,4 @@ tar -xf $version.tar.gz
 cd /usr/local/bin/
 cp -s  $d/ngsplot-$version/bin/* .
 
-echo 'export NGSPLOT=$d/ngsplot-$version' >> ~/.bashrc
+echo "export NGSPLOT=$d/ngsplot-$version" >> ~/.bashrc
