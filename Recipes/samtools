@@ -3,7 +3,7 @@ set -e
 
 # Remove old version
 rm /usr/bin/samtools
-version=1.6
+version=1.9
 cd /usr/local/bioinf-recipes/
 wget https://github.com/samtools/samtools/releases/download/$version/samtools-$version.tar.bz2
 tar -xjf samtools-$version.tar.bz2
