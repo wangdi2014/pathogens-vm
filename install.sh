@@ -47,6 +47,7 @@ aragorn \
 libdatetime-perl \
 libmysqlclient-dev \
 libssl-dev \
+libcurl4-openssl-dev
 libxml-simple-perl \
 parallel \
 prank \
@@ -118,9 +119,25 @@ cwd=$(pwd)
 cd /usr/local/bioinf-recipes/
 
 #devtools
+wget https://cran.r-project.org/src/contrib/curl_3.2.tar.gz
+Rscript -e "install.packages('curl_3.2.tar.gz', repos = NULL, type='source')"
+
+wget https://cran.r-project.org/src/contrib/openssl_1.0.2.tar.gz
+Rscript -e "install.packages('openssl_1.0.2.tar.gz', repos = NULL, type='source')"
+
+wget https://www.stats.bris.ac.uk/R/src/contrib/httr_1.3.1.tar.gz
+Rscript -e "install.packages('httr_1.3.1.tar.gz', repos = NULL, type='source')"
+
+wget https://www.stats.bris.ac.uk/R/src/contrib/whisker_0.3-2.tar.gz
+Rscript -e "install.packages('whisker_0.3-2.tar.gz', repos = NULL, type='source')"
+
+wget https://www.stats.bris.ac.uk/R/src/contrib/git2r_0.23.0.tar.gz
+Rscript -e "install.packages('git2r_0.23.0.tar.gz', repos = NULL, type='source')"
+
 wget https://cran.r-project.org/src/contrib/00Archive/devtools/devtools_1.13.6.tar.gz
 Rscript -e "install.packages('devtools_1.13.6.tar.gz', repos = NULL, type='source')"
-Rscript -e "install.packages(c('httr', 'whisker', 'git2r'), repos='https://www.stats.bris.ac.uk/R/')"
+
+rm git2r_0.23.0.tar.gz devtools_1.13.6.tar.gz whisker_0.3-2.tar.gz httr_1.3.1.tar.gz
 
 #shiny
 git clone --branch v0.14 https://github.com/rstudio/shiny.git
@@ -141,8 +158,12 @@ mv v0.30.0.tar.gz sleuth-v0.30.0.tar.gz
 Rscript -e "install.packages('sleuth-v0.30.0.tar.gz', repos = NULL, type='source')"
 
 #DESeq2
+wget https://cran.r-project.org/src/contrib/locfit_1.5-9.1.tar.gz
+sudo Rscript -e "install.packages('locfit_1.5-9.1.tar.gz', repos = NULL, type='source')"
+
 wget https://cran.r-project.org/src/contrib/00Archive/RcppArmadillo/RcppArmadillo_0.4.200.0.tar.gz
 Rscript -e "install.packages('RcppArmadillo_0.4.200.0.tar.gz', repos = NULL, type='source')"
+
 wget http://bioconductor.org/packages/3.1/bioc/src/contrib/DESeq2_1.8.2.tar.gz
 Rscript -e "install.packages('DESeq2_1.8.2.tar.gz', repos = NULL, type='source')"
 
