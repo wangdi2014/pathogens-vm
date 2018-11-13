@@ -118,7 +118,7 @@ cwd=$(pwd)
 cd /usr/local/bioinf-recipes/
 
 #devtools
-wget https://cran.r-project.org/src/contrib/devtools_1.13.6.tar.gz
+wget https://cran.r-project.org/src/contrib/00Archive/devtools/devtools_1.13.6.tar.gz
 Rscript -e "install.packages('devtools_1.13.6.tar.gz', repos = NULL, type='source')"
 Rscript -e "install.packages(c('httr', 'whisker', 'git2r'), repos='https://www.stats.bris.ac.uk/R/')"
 
