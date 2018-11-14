@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -e
+
+version=2.4
+cd /usr/local/bioinf-recipes/
+wget https://data.broadinstitute.org/alkesgroup/Eagle/downloads/Eagle_v$version.tar.gz
+tar xf Eagle_v$version.tar.gz
+rm Eagle_v$version.tar.gz
+ln -s /usr/local/bioinf-recipes/Eagle_v$version/eagle /usr/local/bin/eagle

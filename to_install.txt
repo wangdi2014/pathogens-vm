@@ -51,3 +51,4 @@ minimap2
 wtdbg2
 jellyfish
 canu
+eagle
